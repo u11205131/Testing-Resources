@@ -1,0 +1,82 @@
+\documentclass[a4paper]{article}
+
+\title{Project Implementation
+\\COS 301 Buzz Project
+\\Group: Testing Phase: Resources
+\\Version 1.0}
+
+\author{
+\\
+\\Carla de Beer 95151835
+\\Prenolan Govender 13102380
+\\Shaun Meintjies 13310896
+\\Collins Mphahlele 12211070
+\\Dumisani Msiza 12225887
+\\Joseph Murray 12030733
+\\Sifiso Shabangu 12081622
+\\Joseph Potgieter 12003672
+\\Johan van Rooyen 11205131
+\\
+\\
+\textit{https://github.com/Carla-de-Beer/Testing-Resources}
+\\
+\\ University of Pretoria}
+
+\date{24 April 2015}
+
+% Need to compile using XeLATeX to avoid default font
+\usepackage{fontspec}
+\setmainfont{Arial}
+% Graphics settings for .eps files
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\DeclareGraphicsExtensions{.eps}
+\usepackage{float}
+
+\begin{document}
+
+\maketitle
+% No page number to cover page
+\pagenumbering{gobble}
+\newpage
+% start page numbering
+\pagenumbering{arabic}
+
+% Generate Table of Contents
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+The purpose of this task was to test the functionality provided by the Resources teams for the Buzz Project.
+\\
+\\
+According to the master specification document, version 0.1, released 13 March 2015, the buzzResources module is used to upload and manage resources like media (e.g. images, video) and documents (e.g. PDF documents, Open Document Format documents). These resources are to be either embedded or linked to in posts.
+\\
+\\
+This team took each of the pre and post-conditions of the required use case, considering the work of both Resources A and Resources B, and tested them for compliance with the functional requirements. 
+\\
+\\The use case for this team is called \textbf{uploadResource}. In terms of the requirements for this use case, and as defined by the master specification document, users should be able to upload resources such as media files or documents. Any uploaded resource should be accessible by other users who should also be able to specify links to that resource. 
+\\
+\\The functional requirements preconditions for this use case included the need to
+\begin{itemize}
+\item detect the mime type
+\item check that size constraints are met
+\item check that the resource type is supported
+\end{itemize}
+The functional requirements postconditions for this use case included the need to
+\begin{itemize}
+\item check that the resource persisted
+\item check that the URL for the resource was created
+\end{itemize}
+
+\section {Functional Testing}
+\subsection {Resources A}
+\subsection {Resources B}
+
+\section {Non-functional testing/assessment}
+\subsection {Resources A}
+\subsection {Resources B}
+
+\end{document}
