@@ -22,29 +22,6 @@ var constraints = {};
 // defines and object resources
 var resources = module.exports;
 
-/**
- * PRIVATE: This method is not exported.
- *
- * Handles the start of a file upload. Checks the mime type of the file before
- * uploading.
- *
- * @param file The file to be uploaded.
- * @param req The request object.
- * @param res The response object.
- * @returns {boolean} True if upload my continue, else false.
- */
-uploadFileStart = function(file, req, res){
-
-    if (!checkMimeType(file.mimetype)){
-
-        res.fileState = "File could not be uploaded. MIME type '"+file.mimetype+"' is not supported.";
-        return false;
-    }
-    console.log("Starting upload of file "+file.name+"...");
-    return true;
-};
-
-
 resources.uploadResources = function(files, relatedID, callback){
         var valid = false;
 	    
@@ -76,80 +53,94 @@ resources.uploadResources = function(files, relatedID, callback){
 };
 
 /**
- * PRIVATE: This method is not exported.
- *
- * NICE TO HAVE, NOT NECESSARY NOW
- *
- * STUB
- *
- * Displays progress of upload.
- *
- * @param file The file being uploaded.
- * @param data
- * @param req The request object.
- * @param res The response object.
- * @returns {boolean} True if upload my continue, else false.
- */
-//~ uploadFileData = function(file, data, req, res){
+     * TODO: This function is a mock function and returns all resources. Needs specified implementation.
+     *
+     * Retrieves resources specified by an array of resource IDs.
+     * @param resIDs The array of resource IDs.
+     * @param callback Receives the requested resources and an error object.
+     */
+    resources.getResourcesById = function(resIDs, callback){
 
-    //~ //return true;
-//~ };
+        var R = mongoose.model("Resources", schemas.resourceSchema);
 
-/**
- * PRIVATE: This method is not exported.
- *
- * Handles the event for when a file upload is complete.
- *
- * @param file The file that was uploaded.
- * @param req The request object.
- * @param res The response object.
- * @param postID The post which references the file.
- */
-//~ uploadFileComplete = function(file, req, res, postID){
+        R.find({'hidden' : false})
+            .populate('_id', 'file_name')
+            .exec(function(err, results){
+                callback(err, results);
+            });
+    };
 
-    //~ // write to database and remove file from temp
-    //~ console.log("Upload complete.");
+    /**
+     * TODO: This function is a mock function and returns all resources. Needs specified implementation.
+     *
+     * Retrieves all resources for the specified buzz space.
+     * @param spaceID The buzz space ID.
+     * @param callback Receives the requested resources and an error object.
+     */
+    resources.getResourcesBySpaceId = function(spaceID, callback){
 
-    //~ for (var i = 0; i < constraints.length; i++){
-        //~ if (constraints[i].mime_type === file.mimetype){
-            //~ if (file.size > constraints[i].size_limit){
-                //~ res.fileState = "File size is too large! Aborted.";
-                //~ deleteTemp(file);
-                //~ return;
-            //~ }
-        //~ }
-    //~ }
+        var R = mongoose.model("Resources", schemas.resourceSchema);
 
-    //~ var R = mongoose.model('Resources', schemas.resourceSchema);
-    //~ var r = new R;
+        R.find({'hidden' : false})
+            .populate('_id', 'file_name')
+            .exec(function(err, results){
+                callback(err, results);
+            });
+    };
 
-    //~ r.file_name = file.name;
-    //~ r.data = fs.readFileSync(file.path);
-    //~ r.hidden = false;
-    //~ r.post_id = postID;
-    //~ r.save(function(err){
-        //~ if (!err){
-            //~ console.log("File successfully saved.");
-        //~ } else {
-            //~ console.log(err);
-        //~ }
-        //~ deleteTemp(file);
-    //~ });
+    /**
+     * TODO: This function is a mock function and returns all resources. Needs specified implementation.
+     *
+     * Retrieves all resources related to a thread or appraisal type.
+     * @param relatedID The ID of the thread or appraisal type.
+     * @param callback Receives the requested resources and an error object.
+     */
+    resources.getResourcesRelated = function(relatedID, callback){
 
-    //~ res.fileState = "File successfully uploaded.";
-//~ };
+        var R = mongoose.model("Resources", schemas.resourceSchema);
 
-/**
- * PRIVATE: This method is not exported.
- *
- * Removes the uploaded file from the temp folder
- *
- * @param file The file to be deleted.
- */
-//~ deleteTemp = function(file){
+        R.find({'hidden' : false})
+            .populate('_id', 'file_name')
+            .exec(function(err, results){
+                callback(err, results);
+            });
+    };
 
-    //~ fs.unlink(file.path);
-//~ };
+
+    /**
+     * Returns all the resources in the database.
+     * @param callback Receives the requested resources and an error object.
+     */
+    resources.getResourcesAll = function(callback){
+
+        var R = mongoose.model("Resources", schemas.resourceSchema);
+
+        R.find({'hidden' : false})
+            .populate('_id', 'file_name')
+            .exec(function(err, results){
+                callback(err, results);
+            });
+    };
+
+    /**
+     * Locates and logically removes the indicated resource, if possible.
+     *
+     * @param resourceID The id of the resource to be removed.
+     * @param callback The callback function receives a success value based on the success
+     * of the addition.
+     */
+    resources.removeResource = function (resourceID, callback) {
+
+        var R = mongoose.model('Resources', schemas.resourceSchema);
+
+        R.findOneAndUpdate({'_id': resourceID}, {'hidden': true}, function (err) {
+            if (err) {
+                callback(false);
+            } else {
+                callback(true);
+            }
+        });
+    };
 
 /**
  * PRIVATE: This function is not exported.
@@ -159,82 +150,16 @@ resources.uploadResources = function(files, relatedID, callback){
  * @param mimeType The MIME type to be validated.
  * @returns {boolean} True if MIME type is allowed, else false.
  */
-//~ checkMimeType = function(mimeType){
+checkMimeType = function(mimeType){
 
-    //~ for (var i = 0; i < constraints.length; i++){
-        //~ if (constraints[i].mime_type === mimeType){
-            //~ return true;
-        //~ }
-    //~ }
+    for (var i = 0; i < constraints.length; i++){
+        if (constraints[i].mime_type === mimeType){
+            return true;
+        }
+    }
 
-    //~ return false;
-//~ };
-
-
-/**
- * This function is called by the upload handler in the server.
- *
- * @param req The request object.
- * @param res The result object.
- * @param next The next server function call in the Daisy Chain.
- * @param postID The post that references the file.
- */
-//~ resources.uploadFile = function(req, res, next, postID){
-
-    //~ var handler = multer({
-
-        //~ dest:
-            //~ tempDir,
-        //~ limits: {
-            //~ fileSize: maxSize
-        //~ },
-
-        //~ rename: function (fieldname, filename){
-            //~ return filename.replace(/\W+/g, '-').toLowerCase()+Date.now();
-        //~ },
-        //~ onFileUploadStart: function(file, req, res){
-            //~ return uploadFileStart(file, req, res);
-        //~ },
-        //~ onFileUploadData: function(file, data, req, res){
-            //~ uploadFileData(file, data, req, res);
-        //~ },
-        //~ onFileSizeLimit: function(file){
-            //~ deleteTemp(file);
-        //~ },
-        //~ onFileUploadComplete: function(file, req, res){
-            //~ uploadFileComplete(file, req, res, postID);
-        //~ }
-    //~ });
-
-//~ resources.getConstraints(function(err, results){
-        //~ // gets the constraints allowed from the database and stores them in the 'constraints' variable
-        //~ // exploit callback paradigm
-        //~ if (!err){
-            //~ constraints = results;
-            //~ handler(req, res, next);
-        //~ }
-    //~ });
-//~ };
-
-/**
- * Locates and logically removes the indicated resource, if possible.
- *
- * @param resourceID The id of the resource to be removed.
- * @param callback The callback function receives a success value based on the success
- * of the addition.
- */
-//~ resources.removeFile = function(resourceID, callback){
-
-    //~ var R = mongoose.model('Resources', schemas.resourceSchema);
-
-    //~ R.findOneAndUpdate({'_id' : resourceID}, {'hidden' : true}, function(err){
-        //~ if (err){
-            //~ callback(false);
-        //~ } else {
-            //~ callback(true);
-        //~ }
-    //~ });
-//~ };
+    return false;
+};
 
 /**
  * This function gets all the resource constraints from the database.
