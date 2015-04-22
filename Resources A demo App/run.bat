@@ -1,0 +1,2 @@
+nodemon ./bin/www
+pause
