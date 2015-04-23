@@ -80,8 +80,19 @@ The functional requirements postconditions for this use case included the need t
 
 \subsection {Resources B}
 \subsubsection {Pre-condition violations}
+
+\paragraph{removeResource}
+The pre-condition of removeResource is assumed to refer to the identification number of a resource in the database which should exist prior to this execution. There are no violations of this pre-condition due to error checks being performed to verify whether or not the entry exists.
+
 \subsubsection {Post-condition violations}
+
+\paragraph{removeResource}
+The post-condition of removeResource would be the removal of an entry. Due to a lack of unit testing functionality, the post-condition fails as there is no visible indication of removeResource working.
+
 \subsubsection {Data structure requirements}
+
+\paragraph{removeResource}
+No data structure requirements mentioned in the service contract, nor does removeResource utilise any data structures.
 
 \section {Non-functional testing / assessment}
 \subsection {Resources A}
@@ -99,18 +110,52 @@ The use case was tested against the following list of architectural requirements
 \subsection {Resources B}
 The use case was tested against the following list of architectural requirements:
 \subsubsection {Usability}
+
+\paragraph{removeResource}
+removeResource demonstrates usability by being simple and easy to use. The function only needs be called along with the ID of the resource to be removed which is intuitive.
+
 \subsubsection {Performance}
+
+\paragraph{removeResource}
+removeResource does not suffer from any performance issues in and of itself, however should the database maintain a sizeable stature, removeResource will be seen to suffer in performance. This is to be expected.
+
 \subsubsection {Scalability}
+
+\paragraph{removeResource}
+removeResource offers no solutions to accomodate an increase or decrease in size of the database.
+
 \subsubsection {Testability}
+
+\paragraph{removeResource}
+removeResource has a complete lack of testability due to it not conforming to proper unit testing standards (making use of callbacks, depending on a live database etc.).
+
 \subsubsection {Security}
+
+\paragraph{removeResource}
+The only security concern would be an incorrect ID being used in order to remove a different resource than required, potentially putting the system at risk.
+
 \subsubsection {Reliability}
+
+\paragraph{removeResource}
+According to the failure of the post-condition, removeResource gives a poor indication with regards to reliability.
+
 \subsubsection {Reusability}
+
+\paragraph{removeResource}
+removeResource is not very reusable due to the dependence on a single database. Using this function throughout this system would not be possible/practical.
+
 \subsubsection {Pluggability}
+
+\paragraph{removeResource}
+In the same vein as reusability, removeResource cannot be integrated into other systems due to a lack of robustness and versatility.
 
 
 \section {Critical Evaluation and Recommendations}
 \subsection {Resources A}
 \subsection {Resources B}
+
+% \paragraph{removeResource}
+%removeResource is logically correct, however the testability of the function is an important aspect which seems to have been overlooked. In addition, the function is not versatile and cannot be adapted easily into another system. It is recommended that removeResource be looked at again and perhaps redone to conform to acceptable testing practices and allow for more robust and functional code. 
 
 
 \end{document}
