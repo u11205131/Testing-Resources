@@ -202,9 +202,13 @@ In the same vein as reusability, removeResource cannot be integrated into other 
 \section {Critical Evaluation and Recommendations}
 \subsection {Resources A}
 \subsection {Resources B}
+\subsubsection {Code and code structure legibility}
+The code has some degree of JSDoc comments, but could have benefited from a more comprehensive commenting system so as to allow newcomers to the code to better understand the program logic. The use of an explanatory README file would also have been welcomed by the testing team and others new to the work to help understand the logic behind the system implemented. Thus, from a code legibility point of view, there are some improvements that can be made to make the existing code more user-friendly. On a positive note, the code does make use of modularisation in the sense the additional functionalities are separated out from the main use case, making it easier to understand, and perhaps also easier to test the code.
+In terms of the files themselves, the file structure could have benefited from a better organisational structure. There are files with duplicate naming, for example, residing in different folders, making it unclear how these fit into the existing code structure (it was assume that the code folders in the master branch were the most current).  In addition, the unit testing code was hidden away in a branch and, as such, was not that straightforward to find.
 
-% \paragraph{removeResource}
-%removeResource is logically correct, however the testability of the function is an important aspect which seems to have been overlooked. In addition, the function is not versatile and cannot be adapted easily into another system. It is recommended that removeResource be looked at again and perhaps redone to conform to acceptable testing practices and allow for more robust and functional code. 
+
+\section {References}
+SOLMS, F., PIETERSE V., OMELEZE S., RAMASILA, L. 2015. \textit{Buzz Discussion Board Requirements and Design Specifications (version 0.1)}. Department of Computer Science, University of Pretoria.
 
 
 \end{document}
