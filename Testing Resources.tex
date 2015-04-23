@@ -147,13 +147,91 @@ No data structure requirements mentioned in the service contract, nor does remov
 \subsection {Resources A}
 The use case was tested against the following list of architectural requirements:
 \subsubsection {Usability}
+\paragraph{getResourcesBySpaceId}
+This function is easy and simple to use. The function is called with the Space ID, and a list of the resources for that space is returned.
+
+\paragraph{getResourcesAll}
+This function is simple and easy to use. The function is called and all resources within the database is returned.
+
+\paragraph{getResourcesRelated}
+This function is simple and easy to use. The function is called and an appraisal type is sent as parameter. All resources of that appraisal type is returned.
+
 \subsubsection {Performance}
+
+\paragraph{getResourcesBySpaceId}
+This function does not suffer from performance issues. The performance of this function depends on the connection and communication speed of the database.
+
+\paragraph{getResourcesAll}
+This function does not suffer from performance issues. The performance of this function depends on the connection and communication speed of the database.
+
+\paragraph{getResourcesRelated}
+This function does not suffer from performance issues. The performance of this function depends on the connection and communication speed of the database.
+
 \subsubsection {Scalability}
+
+\paragraph{getResourcesBySpaceId}
+This function does not place any restriction on the possible size of the database, as a list of all resources within a certain space is returned.
+
+\paragraph{getResourcesAll}
+This function does not place any restriction on the possible size of the database, as a list of all resources in the database is returned.
+
+\paragraph{getResourcesRelated}
+This function does not place any restriction on the possible size of the database, as a list of resources of a certain type is returned.
+
 \subsubsection {Testability}
+
+\paragraph{getResourcesBySpaceId}
+This function is easy to test, as it can be tested from the interfaces that was created.
+
+\paragraph{getResourcesAll}
+This function is easy to test, as it can be tested from the interfaces that was created.
+
+\paragraph{getResourcesRelated}
+This function is easy to test, as it can be tested from the interfaces that was created.
+
 \subsubsection {Security}
+
+\paragraph{getResourcesBySpaceId}
+This function is secure, as it only retrieves information from the database, about the resources for a certain space.
+
+\paragraph{getResourcesAll}
+This function is secure, as it only retrieves information from the database, about all of the resources in the database.
+
+\paragraph{getResourcesRelated}
+This function is secure, as it only retrieves information from the database, about all of the resources of a certain appraisal type.
+
 \subsubsection {Reliability}
+
+\paragraph{getResourcesBySpaceId}
+This function is very unreliable, because it does not conform to the post-condition. It returns a list of all of the resources, instead of only returning a list of resources within a certain space.
+
+\paragraph{getResourcesAll}
+This function is reliable as it conforms to the post-condition. The function returns a list of all of the resources within the database.
+
+\paragraph{getResourcesRelated}
+This function is very unreliable, because it does not conform to the post-condition. It returns a list of all of the resources, instead of only returning a list of resources of a certain appraisal type.
+
 \subsubsection {Reusability}
+
+\paragraph{getResourcesBySpaceId}
+This function is reusable, as it retrieves information from the database, about the resources for a certain space. This function can be called and reused throughout the system.
+
+\paragraph{getResourcesAll}
+This function is reusable, as it only retrieves information from the database, about all of the resources in the database. This function can be called and reused throughout the system.
+
+\paragraph{getResourcesRelated}
+This function is reusable, as it only retrieves information from the database, about all of the resources of a certain appraisal type. This function can be called and reused throughout the system.
+
 \subsubsection {Pluggability}
+
+\paragraph{getResourcesBySpaceId}
+This function is pluggable, as it retrieves information from the database, about the resources for a certain space. This function can be called and reused within any system if called on a database that has the same structure as the current database.
+
+\paragraph{getResourcesAll}
+This function is reusable, as it only retrieves information from the database, about all of the resources in the database. This function can be called and reused within any system if called on a database that has the same structure as the current database.
+
+\paragraph{getResourcesRelated}
+This function is reusable, as it only retrieves information from the database, about all of the resources of a certain appraisal type. This function can be called and reused within any system if called on a database that has the same structure as the current database.
 
 
 \subsection {Resources B}
