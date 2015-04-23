@@ -9,7 +9,7 @@
 \\
 \\Carla de Beer 95151835
 \\Prenolan Govender 13102380
-\\Shaun Meintjies 13310896
+\\Shaun Meintjes 13310896
 \\Collins Mphahlele 12211070
 \\Dumisani Msiza 12225887
 \\Joseph Murray 12030733
@@ -75,8 +75,37 @@ The functional requirements postconditions for this use case included the need t
 
 \subsection {Resources A}
 \subsubsection {Pre-condition violations}
+
+\paragraph{getResourcesBySpaceId}
+The pre-condition will be that the SpaceID that is sent in as a parameter does exist in the database prior to this execution. There are no violations of this pre-condition.
+
+\paragraph{getResourcesAll}
+The pre-condition will be that there exist resources in the database prior to this execution. There are no violations of this pre-condition.
+
+\paragraph{getResourcesRelated}
+The pre-condition will be that the appraisal type (RelatedID) that is sent in as a parameter does exist in the database prior to this execution. There are no violations of this pre-condition. 
+
 \subsubsection {Post-condition violations}
+
+\paragraph{getResourcesBySpaceId}
+The post-condition will be that the resources that exist in a certain space will be returned. This post-condition fails, because the function queries the database and returns all of the resources in the database, which is incorrect. No exceptions are thrown if the Buzz Space does not exist.
+
+\paragraph{getResourcesAll}
+The post-condition will be that all of the resources in the database will be returned. This post-condition holds, and all of the resources are returned.
+
+\paragraph{getResourcesRelated}
+The post-condition will be that the resources that exist in the database of the specified appraisal type will be returned. This post-condition fails, because the function queries the database and returns all of the resources in the database, which is incorrect.
+
 \subsubsection {Data structure requirements}
+
+\paragraph{getResourcesBySpaceId}
+No data structure requirements mentioned in the service contract, nor does getResourceBySpaceId utilise any data structures.
+
+\paragraph{getResourcesAll}
+No data structure requirements mentioned in the service contract, nor does getResourceAll utilise any data structures..
+
+\paragraph{getResourcesRelated}
+No data structure requirements mentioned in the service contract, nor does getResourcesRelated utilise any data structures.
 
 \subsection {Resources B}
 \subsubsection {Pre-condition violations}
