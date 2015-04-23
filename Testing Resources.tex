@@ -52,7 +52,7 @@
 The purpose of this task was to test the functionality provided by the Resources teams for the Buzz Project.
 \\
 \\
-According to the master specification document, version 0.1, released 13 March 2015, the buzzResources module is used to upload and manage resources like media (e.g. images, video) and documents (e.g. PDF documents, Open Document Format documents). These resources are to be either embedded or linked to in posts.
+According to the master specification document, version 0.1, released 13 March 2015 (SOLMS \textit{et al}, 2015), the buzzResources module is used to upload and manage resources like media (e.g. images, video) and documents (e.g. PDF documents, Open Document Format documents). These resources are to be either embedded or linked to in posts.
 \\
 \\
 This team took each of the pre and post-conditions of the required use case, considering the work of both Resources A and Resources B, and tested them for compliance with the functional requirements. 
@@ -108,6 +108,26 @@ No data structure requirements mentioned in the service contract, nor does getRe
 No data structure requirements mentioned in the service contract, nor does getResourcesRelated utilise any data structures.
 
 \subsection {Resources B}
+None of the functions or use cases for Resources B make use of callbacks.
+
+\textit{ "Nearly everything in node uses callbacks […] Callbacks are functions that are executed asynchronously, or at a later time. Instead of the code reading top to bottom procedurally, async programs may execute different functions at different times based on the order and speed that earlier functions like http requests or file system reads happen."}
+
+ %(github.com/maxogden/art-of-node#callbacks).
+
+
+The implementation code makes an attempt to allow for the creation of modules for export, but since all the functions, including the main use case, are all object or value-returning functions, it can be said that the code fails, outright, all its services contracts. This is due to the fact that the Resources B code, as it currently stands, cannot be unit tested or integrated into the main code framework for the project. 
+The Testing Resources B team undertook an attempt to write unit testing code, working with the existing code structure, rather than amending it other than by introducing a callback to the \texttt{uploadResources} function, in order to be able to test the code for compliance with both functional and non-functional requirements. The code did not run and terminated in an error message stating \texttt{“Error: Cannot find module ‘DataBaseStuff’”}. It seems, therefore that one of the modules is missing from the code structure and, as such, the code could not be tested by means of callbacks.
+After some rummaging around in the various GitHub branches, squirrelled away in one of the team members’ branches was a section called “Unit Testing Code”. It became clear that this code is intended to be run via node package manager (npm) and ran unit tests for the following options: 
+\begin{itemize}
+\item	Download valid resource
+\item	Download invalid resource
+\item	Add a new Resource Type
+\item	Remove a Resource Type
+\item	Modify a Resource Type
+\item	Retrieve Resource Type Constraints
+\item	Detect Mime Type
+\end{itemize}
+In the absence of being able to test via modules and callbacks, the testing team used this unit test code, as provided by the implementation team, for the testing the Resources B section.
 \subsubsection {Pre-condition violations}
 
 \paragraph{removeResource}
