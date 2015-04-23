@@ -1,20 +1,21 @@
-                   
 Non functional requirements
 
 Deployability
-Electrolyte used for deploying
+Electrolyte is used for deploying the module to other  modules that depend on it,however the lack of  exception handling makes it hard to use the function in the module as running code issues some exception we can't trace( running app.js file ).
+
+ 
 
 Flexibility
 
 
 Testability
-No unit test created for testing of each functions implemented
+No unit test created for testing of each functions implemented and provided testing is in the app.js file which caters the interface side of the function,however adding Constraint and other functions result in too long to response exception being thrown by the browser as connection with the database is not well established and fails.
 
 
 Maintainability
 Structure of the parameters is not specified in the functions,only what's needed is stated but the actual type of the parameter is not specified and weather it is in Json object or not is not documented.
 
-Package json file is not well documented ,missing link to the repository and other fields like author and destination of the module in the npm registry 
+Package json file is not well documented ,missing link to the repository and other fields like author and destination of the module in the npm registry
 
 usability
 
@@ -24,24 +25,19 @@ integrability
 
 Auditability
 
-Log files are not used to monitor interaction in the module ,as nothing is written in the log file . 
+Log files are not used to monitor interaction in the module ,as nothing is written in the log files .
 
 Reliability
+Lack of input validation results in garbage data entered in the database,which result in unreliable results(addingConstraint) and connection to database takes too long or results in browser throwing an exception for taking too long to respond(runing removeConstraint,addingConstraint and updateConstraint),thus module is not reliable to complete a task base on this factors.
 
 Security
 Interface is not secured in the client side adding Constraint section does not validate user input and adds the given input to the database without any validation ,the only validation is on the server side where it checks if the input is not already in the database.
 
 performance
-Connection to the database takes longer adding Constraint response time is unrealistic for the system as it takes longer
+Connection to the database takes longer adding Constraint response time is unrealistic for the system as it takes longer.
 
 
 pluggability
-
-
-
-
-
-
 
 
 
