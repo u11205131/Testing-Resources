@@ -1,0 +1,48 @@
+                   
+Non functional requirements
+
+Deployability
+Electrolyte used for deploying
+
+Flexibility
+
+
+Testability
+No unit test created for testing of each functions implemented
+
+
+Maintainability
+Structure of the parameters is not specified in the functions,only what's needed is stated but the actual type of the parameter is not specified and weather it is in Json object or not is not documented.
+
+Package json file is not well documented ,missing link to the repository and other fields like author and destination of the module in the npm registry 
+
+usability
+
+
+integrability
+
+
+Auditability
+
+Log files are not used to monitor interaction in the module ,as nothing is written in the log file . 
+
+Reliability
+
+Security
+Interface is not secured in the client side adding Constraint section does not validate user input and adds the given input to the database without any validation ,the only validation is on the server side where it checks if the input is not already in the database.
+
+performance
+Connection to the database takes longer adding Constraint response time is unrealistic for the system as it takes longer
+
+
+pluggability
+
+
+
+
+
+
+
+
+
+
