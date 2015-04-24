@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.2.16)  24 APR 2015 13:45
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.2.16)  24 APR 2015 19:55
 entering extended mode
 **Testing*Resources.tex
 ("C:\Users\cadebe\Documents\GitHub\Testing-Resources\Testing Resources.tex"
@@ -415,30 +415,30 @@ LaTeX Info: Redefining \upshape on input line 2102.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fontspec\fontspec.cfg")))
 \g__file_internal_ior=\read1
 Requested font "Arial" at 10.0pt
- -> ú^^M/Windows/Fonts/arial.ttf
+ -> ñ^^M/Windows/Fonts/arial.ttf
 Requested font "Arial/ICU" at 10.0pt
- -> è^^M/Windows/Fonts/arial.ttf
+ -> ß^^M/Windows/Fonts/arial.ttf
 \g_fontspec_family_Arial_int=\count123
 Requested font "Arial/ICU" at 10.0pt
- -> ã^^O/Windows/Fonts/arial.ttf
+ -> Ú^^O/Windows/Fonts/arial.ttf
 Requested font "Arial/ICU" at 10.0pt
- -> æ^^O/Windows/Fonts/arial.ttf
+ -> Ý^^O/Windows/Fonts/arial.ttf
 Requested font "Arial/B/ICU" at 10.0pt
- -> é^^O/Windows/Fonts/arialbd.ttf
+ -> à^^O/Windows/Fonts/arialbd.ttf
 Requested font "Arial/B/ICU" at 10.0pt
- -> ï^^O/Windows/Fonts/arialbd.ttf
+ -> æ^^O/Windows/Fonts/arialbd.ttf
 Requested font "Arial/ICU" at 10.0pt
- -> ò^^O/Windows/Fonts/arial.ttf
+ -> é^^O/Windows/Fonts/arial.ttf
 Requested font "Arial/I/ICU" at 10.0pt
- -> õ^^O/Windows/Fonts/ariali.ttf
+ -> ì^^O/Windows/Fonts/ariali.ttf
 Requested font "Arial/I/ICU" at 10.0pt
- -> û^^O/Windows/Fonts/ariali.ttf
+ -> ò^^O/Windows/Fonts/ariali.ttf
 Requested font "Arial/ICU" at 10.0pt
- -> ÿÿ/Windows/Fonts/arial.ttf
+ -> õ^^O/Windows/Fonts/arial.ttf
+Requested font "Arial/BI/ICU" at 10.0pt
+ -> ø^^O/Windows/Fonts/arialbi.ttf
 Requested font "Arial/BI/ICU" at 10.0pt
  -> ÿÿ/Windows/Fonts/arialbi.ttf
-Requested font "Arial/BI/ICU" at 10.0pt
- -> ^^K
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -459,7 +459,7 @@ Requested font "Arial/BI/ICU" at 10.0pt
 . <->"Arial/BI/ICU:script=latn;language=DFLT;"
 .................................................
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 10.0pt
- -> ^^Q
+ -> ^^H
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
@@ -745,13 +745,13 @@ LaTeX Info: Redefining \nameref on input line 37.
 ("C:\Users\cadebe\Documents\GitHub\Testing-Resources\Testing Resources.out")
 \@outlinefile=\write3
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 17.28pt
- -> #
+ -> ^^Z
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 12.0pt
- -> V
+ -> M
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 8.0pt
- -> \
+ -> S
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 6.0pt
- -> b
+ -> Y
 Requested font "cmmi12" at 12.0pt
 Requested font "cmmi8" at 8.0pt
 Requested font "cmmi6" at 6.0pt
@@ -768,7 +768,7 @@ Requested font "cmr12" at 12.0pt
 Requested font "cmr8" at 8.0pt
 Requested font "cmr6" at 6.0pt
 Requested font "Arial/I/ICU:script=latn;language=DFLT;" at 12.0pt
- -> Ô
+ -> Ë
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\se-ascii-print.def"
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
@@ -778,16 +778,16 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 ]
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 14.4pt
- -> e
+ -> \
 Requested font "Arial/B/ICU:script=latn;language=DFLT;" at 14.4pt
- -> 5
+ -> ,
  ("C:\Users\cadebe\Documents\GitHub\Testing-Resources\Testing Resources.toc"
 Requested font "Arial/B/ICU:script=latn;language=DFLT;" at 10.0pt
- -> P^^O/Windows/Fonts/arialbd.ttf
+ -> G^^O/Windows/Fonts/arialbd.ttf
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 7.0pt
- -> n^^O/Windows/Fonts/arial.ttf
+ -> e^^O/Windows/Fonts/arial.ttf
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 5.0pt
- -> t^^O/Windows/Fonts/arial.ttf
+ -> k^^O/Windows/Fonts/arial.ttf
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -796,7 +796,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
  [1]
 Requested font "Arial/I/ICU:script=latn;language=DFLT;" at 10.0pt
- -> ^^8c
+ -> ^^83
 
 Underfull \hbox (badness 10000) in paragraph at lines 53--64
 
@@ -818,7 +818,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--64
  []
 
 Requested font "Arial/B/ICU:script=latn;language=DFLT;" at 12.0pt
- -> ^^V^^D/Windows/Fonts/arialbd.ttf
+ -> ^^Y^^D/Windows/Fonts/arialbd.ttf
 [2]
 Overfull \hbox (5.57463pt too wide) in paragraph at lines 85--86
 []\EU1/Arial(0)/m/n/10 The database is queried (albeit erroneously due to logic
@@ -847,47 +847,143 @@ Overfull \hbox (40.45184pt too wide) in paragraph at lines 191--194
 written for the \EU1/lmtt/m/n/10 uploadResources
  []
 
-[6] [7]
-Overfull \hbox (41.1527pt too wide) in paragraph at lines 231--232
+[6]
+Overfull \hbox (7.015pt too wide) in paragraph at lines 219--220
+ []\EU1/Arial(0)/bx/n/10 removeResourceType[] \EU1/Arial(0)/m/n/10 The pre-cond
+ition of removeResourceType is assumed
+ []
+
+
+Overfull \hbox (8.84279pt too wide) in paragraph at lines 225--226
+ []\EU1/Arial(0)/bx/n/10 removeResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 Th
+e pre-condition of removeResourceType-
+ []
+
+[7]
+Overfull \hbox (41.1527pt too wide) in paragraph at lines 243--244
 \EU1/Arial(0)/m/n/10 However, when the line \EU1/lmtt/m/n/10 var results = mime
 .detectMimeType("./r/mountain.jpeg"); 
  []
 
 
-Overfull \hbox (4.81386pt too wide) in paragraph at lines 240--241
+Overfull \hbox (4.81386pt too wide) in paragraph at lines 252--253
 \EU1/Arial(0)/m/n/10 many of the functionalities, such as mimetype detection, w
 hich \EU1/lmtt/m/n/10 uploadResources
  []
 
-[8]
-Overfull \hbox (1.17189pt too wide) in paragraph at lines 295--296
+
+Overfull \hbox (10.73898pt too wide) in paragraph at lines 255--256
+ []\EU1/Arial(0)/bx/n/10 modifyResourceType[] \EU1/Arial(0)/m/n/10 It is not cl
+ear whether the items uploaded to the database
+ []
+
+[8] [9]
+Overfull \hbox (1.17189pt too wide) in paragraph at lines 319--320
  []\EU1/Arial(0)/bx/n/10 addingConstraint,removeConstraint and updateConstraint
 [] \EU1/Arial(0)/m/n/10 Connection to
  []
 
-[9]
-Overfull \hbox (8.19176pt too wide) in paragraph at lines 329--330
+[10]
+Overfull \hbox (8.19176pt too wide) in paragraph at lines 353--354
  []\EU1/Arial(0)/bx/n/10 addingConstraint,removeConstraint and updateConstraint
 [] \EU1/Arial(0)/m/n/10 No unit test cre-
  []
 
-[10] [11] [12] [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 455.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 455.
+[11] [12] [13] [14]
+Overfull \hbox (2.00034pt too wide) in paragraph at lines 468--469
+ []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
+retrieveResourceTypeConstraint does not
+ []
+
+
+Overfull \hbox (1.30833pt too wide) in paragraph at lines 468--469
+\EU1/Arial(0)/m/n/10 suffer from any performance issues in and of itself, howev
+er should the database
+ []
+
+
+Overfull \hbox (9.05113pt too wide) in paragraph at lines 491--492
+ []\EU1/Arial(0)/bx/n/10 removeResourceType[] \EU1/Arial(0)/m/n/10 removeResour
+ceType offers no solutions to removeRe-
+ []
+
+
+Overfull \hbox (2.36655pt too wide) in paragraph at lines 494--495
+ []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
+retrieveResourceTypeConstraint offers no
+ []
+
+[15]
+Overfull \hbox (4.20737pt too wide) in paragraph at lines 520--521
+ []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
+retrieveResourceTypeConstraint seems to
+ []
+
+
+Overfull \hbox (5.15141pt too wide) in paragraph at lines 531--532
+ []\EU1/Arial(0)/bx/n/10 downloadResource[] \EU1/Arial(0)/m/n/10 There should n
+ot be any security issues involved in down-
+ []
+
+[16]
+Overfull \hbox (6.62599pt too wide) in paragraph at lines 546--547
+ []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
+retrieveResourceTypeConstraint has no in-
+ []
+
+
+Overfull \hbox (8.14099pt too wide) in paragraph at lines 567--568
+ []\EU1/Arial(0)/bx/n/10 addResourceType[] \EU1/Arial(0)/m/n/10 According to th
+e failure of the post-condition, addResource-
+ []
+
+
+Overfull \hbox (12.58435pt too wide) in paragraph at lines 570--571
+ []\EU1/Arial(0)/bx/n/10 removeResourceType[] \EU1/Arial(0)/m/n/10 According to
+ the failure of the post-condition, removeRe-
+ []
+
+
+Overfull \hbox (11.65042pt too wide) in paragraph at lines 573--574
+ []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
+According to the failure of the post-condition,
+ []
+
+[17]
+Overfull \hbox (8.28127pt too wide) in paragraph at lines 599--600
+ []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
+retrieveResourceTypeConstraint is not very
+ []
+
+[18]
+Overfull \hbox (0.52705pt too wide) in paragraph at lines 622--623
+ []\EU1/Arial(0)/bx/n/10 removeResourceType[] \EU1/Arial(0)/m/n/10 In the same 
+vein as reusability, removeResourceType
+ []
+
+
+Overfull \hbox (2.72432pt too wide) in paragraph at lines 625--626
+ []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
+In the same vein as reusability, retrieveRe-
+ []
+
+[19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 650.
+ [20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 650.
 
 ("C:\Users\cadebe\Documents\GitHub\Testing-Resources\Testing Resources.aux")
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 455.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 455.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 455.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 650.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 650.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 650.
  ) 
 Here is how much of TeX's memory you used:
  19962 strings out of 429025
  370019 string characters out of 3167800
- 417083 words of memory out of 3000000
+ 419083 words of memory out of 3000000
  23033 multiletter control sequences out of 15000+200000
  6928 words of font info for 48 fonts, out of 3000000 for 9000
  912 hyphenation exceptions out of 8191
  46i,6n,45p,10412b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Testing*Resources.pdf (15 pages).
+Output written on Testing*Resources.pdf (21 pages).

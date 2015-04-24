@@ -71,7 +71,7 @@ The functional requirements postconditions for this use case included the need t
 \item check that the resource persisted
 \item check that the URL for the resource was created
 \end{itemize}
-\textbf{Note to the lecturers: the testing resources group had to import the Resources A code repository into the GitHub repository to allow access to the code to all members. This may lead to the appearance of a skew in the git contributions, when this is not the case.}
+\textbf{Note to the lecturers: the testing resources group had to import the Resources A code repository into this group's GitHub repository to allow access to the code to all members. This may lead to the appearance of a skew in the git contributions, when this is not the case.}
 
 \section {Functional Testing}
 
@@ -420,6 +420,12 @@ This function is reusable, as it only retrieves information from the database, a
 The use case was tested against the following list of architectural requirements:
 \subsubsection {Usability}
 
+\paragraph{uploadResources}
+There is no indication of the provision of HTML elements as part of the implementation team’s work, so it can’t be stated with certain how this use case is intended to be implemented in terms of an interface. However, the function is designed to be fairly simple to use: the user calls this function, supplying input values that provide the file path to the object to be uploaded, and a short description thereof.
+
+\paragraph{downloadResource}
+ The function is intended to be fairly simple and easy to use: only a file name is required.
+
 \paragraph{modifyResourceType}
 Since the function does not work as required, any associated performance measurement, in this case, is irrelevant. 
 
@@ -435,7 +441,16 @@ removeResourceType demonstrates usability by being simple and easy to use. The f
 \paragraph{retrieveResourceTypeConstraint}
 retrieveResourceTypeConstraint demonstrates usability by being simple and easy to use. The function only needs be called along with the string name of the resource of which the constraint should be retrieved which is intuitive.
 
+\paragraph{detectMimeType}
+Again, without an indication of interface design for this use case, it can’t be stated with certainty what the usability implications would be. However, from the parameter requirement for this function, i.e. the input of a file path, the intention is for a fairly straightforward and simple use.
+
 \subsubsection {Performance}
+
+\paragraph{uploadResources}
+It is hard to measure the performance of this code accurately. Since the general impression is that the code is not working correctly, the execution time given at the bottom of the screen for each of the test runs is somewhat meaningless. Even if it were useful, there is no benchmark available from Resources A, for example, against which to test the performance of this use case.
+
+\paragraph{downloadResource}
+It is hard to measure the performance of this code accurately. Since the general impression is that the code is not working correctly, the execution time given at the bottom of the screen for each of the test runs is somewhat meaningless. However, the function is merely downloading a resource from a server, and performance for the majority of files, assuming that they are fairly small, should be fairly efficient for this use case.
 
 \paragraph{removeResource}
 removeResource does not suffer from any performance issues in and of itself, however should the database maintain a sizeable stature, removeResource will be seen to suffer in performance. This is to be expected.
@@ -451,9 +466,17 @@ performance
 
 \paragraph{retrieveResourceTypeConstraint}
 retrieveResourceTypeConstraint does not suffer from any performance issues in and of itself, however should the database maintain a sizeable stature, retrieveResourceTypeConstraint will be seen to suffer in performance. This is to be expected.
-performance
+
+\paragraph{detectMimeType}
+The function is a Boolean returning value, and such, had it been correctly implemented, should have been reasonably efficient. 
 
 \subsubsection {Scalability}
+
+\paragraph{uploadResources}
+A limit has been imposed on the size of files that can be uploaded, therefore scalability in terms of upload size is restricted. The function is designed to upload only a single file at any one time.
+
+\paragraph{downloadResource}
+There should not be any issues with regard to scalability of this use case - the only burden might be on the server.
 
 \paragraph{modifyResourceType}
 A size limit is imposed on the degree of modification that can be made to the uploaded resource, as such there is a limitation on the scalability of modifications that can be made.
@@ -470,7 +493,16 @@ removeResourceType offers no solutions to removeResourceType an increase or decr
 \paragraph{retrieveResourceTypeConstraint}
 retrieveResourceTypeConstraint offers no solutions to retrieveResourceTypeConstraint an increase or decrease in size of the database.
 
+\paragraph{detectMimeType}
+Scaling the system up, or down, should not have any implication on this function. 
+
 \subsubsection {Testability}
+
+\paragraph{uploadResources}
+Some unit testing has been undertaken by the implementation team; however, as became clear, this code does not work as expected. On a positive note, the use of modularisation does help in separating out functionalities and being able to focus on the individual functions. 
+
+\paragraph{downloadResource}
+Some unit testing has been undertaken by the implementation team; however, as became clear, this code does not work as expected. On a positive note, the use of modularisation does help in separating out functionalities and being able to focus on the individual functions. 
 
 \paragraph{modifyResourceType}
 The function has been modularised and this should , in principle, facilitate its testability.
@@ -487,7 +519,16 @@ removeResourceType seems to be testable.
 \paragraph{retrieveResourceTypeConstraint}
 retrieveResourceTypeConstraint seems to be testable.
 
+\paragraph{detectMimeType}
+Some unit testing has been undertaken by the implementation team; however, as became clear, this code does not work as expected: the function returns true regardless of the mimetype input provided. 
+
 \subsubsection {Security}
+
+\paragraph{uploadResources}
+There does not seem to be to be any limit imposed on the length of the description to be provided as part of the function parameters. There is the risk that someone could attempt to upload a significant amount of information, potentially malware, onto the server via this input value, potentially causing issues. 
+
+\paragraph{downloadResource}
+There should not be any security issues involved in downloading resources from the server.
 
 \paragraph{modifyResourceType}
 This function may pose a security risk. It does not check the mimetype to see if it may be harmful. The function also doesn’t place constraints on the new size limit, which could lead to a significant portion of the database’s memory being allocated to the resources.
@@ -504,7 +545,17 @@ removeResourceType has no input validations and is therefore a great security ri
 \paragraph{retrieveResourceTypeConstraint}
 retrieveResourceTypeConstraint has no input validations and is therefore a great security risk.
 
+\paragraph{detectMimeType}
+This use case simply checks a file type for validity and, as such, does not pose and security concerns.
+
 \subsubsection {Reliability}
+
+\paragraph{uploadResources}
+The use case does not work as expected and can therefore not be described as being 
+
+\paragraph{downloadResource}
+The use case does not work as expected and can therefore not be described as being 
+reliable. 
 
 \paragraph{modifyResourceType}
 The use case does not work as expected and cannot be described as reliable.
@@ -521,7 +572,16 @@ According to the failure of the post-condition, removeResourceType gives a poor 
 \paragraph{retrieveResourceTypeConstraint}
 According to the failure of the post-condition, retrieveResourceTypeConstraint gives a poor indication with regards to reliability.
 
+\paragraph{detectMimeType}
+This function cannot be considered to be reliable: it returns true regardless of the mimetype input provided. 
+
 \subsubsection {Reusability}
+
+\paragraph{uploadResources}
+If the use case does not work, it can be argued that there is no scope for reusability.
+
+\paragraph{downloadResource}
+If the use case does not work, it can be argued that there is no scope for reusability.
 
 \paragraph{modifyResourceType}
 The use case does not work as expected and cannot be described as reusable.
@@ -538,7 +598,16 @@ removeResourceType is not very reusable due to the dependence on a single databa
 \paragraph{retrieveResourceTypeConstraint}
 retrieveResourceTypeConstraint is not very reusable due to the dependence on a single database. Using this function throughout this system would not be possible/practical.
 
+\paragraph{detectMimeType}
+If the use case does not work, it can be argued that there is no scope for reusability.
+
 \subsubsection {Pluggability}
+
+\paragraph{uploadResources}
+Due to the absence of use of callbacks in the code, as it currently stands, the code cannot be integrated into the existing implementation structure, and is therefore not pluggable.
+
+\paragraph{downloadResource}
+Due to the absence of use of callbacks in the code, as it currently stands, the code cannot be integrated into the existing implementation structure, and is therefore not pluggable.
 
 \paragraph{modifyResourceType}
 Due to the absence of callbacks in this code, as it currently stands, the code cannot be integrated into the existing implementation structure and is therefore, cannot be considered to be pluggable.
@@ -555,16 +624,23 @@ In the same vein as reusability, removeResourceType cannot be integrated into ot
 \paragraph{retrieveResourceTypeConstraint}
 In the same vein as reusability, retrieveResourceTypeConstraint cannot be integrated into other systems due to a lack of robustness and versatility.
 
+\paragraph{detectMimeType}
+Due to the absence of use of callbacks in the code, as it currently stands, the code cannot be integrated into the existing implementation structure, and is therefore not pluggable.
+
 
 \section {Critical Evaluation and Recommendations}
 \subsection {Resources A}
-\subsubsection {Master specification compilance}
+\subsubsection {Master specification compliance}
 The following of the master specification for the implementation was followed correctly to some extent in the resource implementation ,most functions were implemented and worked to some extent,functionality was prioritised over following software principles like having a unit test for each function created and being specific in documentation of functions parameter types .
 
 \subsection {Resources B}
 \subsubsection {Code and code structure legibility}
 The code has some degree of JSDoc comments, but could have benefited from a more comprehensive commenting system so as to allow newcomers to the code to better understand the program logic. The use of an explanatory README file would also have been welcomed by the testing team and others new to the work to help understand the logic behind the system implemented. Thus, from a code legibility point of view, there are some improvements that can be made to make the existing code more user-friendly. On a positive note, the code does make use of modularisation in the sense the additional functionalities are separated out from the main use case, making it easier to understand, and perhaps also easier to test the code.
 In terms of the files themselves, the file structure could have benefited from a better organisational structure. There are files with duplicate naming, for example, residing in different folders, making it unclear how these fit into the existing code structure (it was assume that the code folders in the master branch were the most current).  In addition, the unit testing code was hidden away in a branch and, as such, was not that straightforward to find.
+
+\subsubsection {Use cases}
+It seems as though the team added additional use cases to the project, such as removeResourceType, modifyResourceType and removeResourceType, in addition to the required use case uploadResource, and its associated pre and post-conditions. This is a laudable, however, there are issues in the main use case that had not been resolved, and there are also issues with the use cases introduced. In hindsight it might have been more expedient for the implementation team to have focused on correctly implementing the main required use case, and additional functionalities later on if there were time.
+
 
 
 \section {References}
