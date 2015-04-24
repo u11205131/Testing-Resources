@@ -30,7 +30,7 @@
 % Graphics settings for .eps files
 \usepackage{graphicx}
 \usepackage{epstopdf}
-\DeclareGraphicsExtensions{.eps}
+\DeclareGraphicsExtensions{.jpg}
 \usepackage{float}
 
 \begin{document}
@@ -153,7 +153,13 @@ After some rummaging around in the various GitHub branches, squirrelled away in 
 \item	Retrieve Resource Type Constraints
 \item	Detect Mime Type
 \end{itemize}
-In the absence of being able to test via modules and callbacks, the testing team used this unit test code, as provided by the implementation team, for the testing the Resources B section.
+In the absence of being able to test via modules and callbacks, the testing team used this unit test code, as provided by the implementation team, for the testing the Resources B section. Below is a screenshot of the result obtained from the initial running of the provided unit testing code, prior to changing input parameters.
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{Images/test-02.jpg}
+\caption{Unit testing Resources B: the output provided by running the unit test code, as provided by the implementation team \label{overflow}}
+\end{figure}
+
 \subsubsection {Pre-condition violations}
 
 \paragraph{removeResource}
