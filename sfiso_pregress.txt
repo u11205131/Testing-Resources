@@ -39,6 +39,10 @@ Connection to the database takes longer adding Constraint response time is unrea
 
 pluggability
 
+Critical Discussion on A
+
+The following of the master specification for the implementation was followed correctly to some extent in the resource implementation ,most functions were implemented and worked to some extent,functionality was prioritised over following software principles like having a unit test for each function created and being specific in documentation of functions parameter types .
+
 
 
 
