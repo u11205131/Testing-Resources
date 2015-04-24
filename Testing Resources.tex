@@ -396,50 +396,92 @@ This function is reusable, as it only retrieves information from the database, a
 The use case was tested against the following list of architectural requirements:
 \subsubsection {Usability}
 
+\paragraph{uploadResources}
+There is no indication of the provision of HTML elements as part of the implementation team’s work, so it cannot be stated with certain how this use case is intended to be implemented in terms of an interface. However, the function is designed to be fairly simple to use: the user calls this function, supplying input values that provide the file path to the object to be uploaded, and a short description thereof.
+
+
 \paragraph{removeResource}
 removeResource demonstrates usability by being simple and easy to use. The function only needs be called along with the ID of the resource to be removed which is intuitive.
 
+\paragraph{detectMimeType}
+Again, without an indication of interface design for this use case, it can’t be stated with certainty what the usability implications would be. However, from the parameter requirement for this function, i.e. the input of a file path, the intention is for a fairly straightforward and simple use.
+
 \subsubsection {Performance}
 
+\paragraph{uploadResources}
+It is hard to measure the performance of this code accurately. Since the general impression is that the code is not working correctly, the execution time given at the bottom of the screen for each of the test runs is somewhat meaningless. Even if it were useful, there is no benchmark available from Resources A, for example, against which to test the performance of this use case.
+
 \paragraph{removeResource}
-removeResource does not suffer from any performance issues in and of itself, however should the database maintain a sizeable stature, removeResource will be seen to suffer in performance. This is to be expected.
+removeResource does not suffer from any performance issues in and of itself, however should the database maintain a sizeable stature, \textit{removeResource} will be seen to suffer in performance. This is to be expected.
 performance
 
+\paragraph{detectMimeType}
 
 \subsubsection {Scalability}
 
+A limit has been imposed on the size of files that can be uploaded, therefore scalability in terms of upload size is restricted. The function is designed to upload only a single file at any one time.
+
+\paragraph{uploadResources}
+
 \paragraph{removeResource}
-removeResource offers no solutions to accomodate an increase or decrease in size of the database.
+removeResource offers no solutions to accommodate an increase or decrease in size of the database.
+
+\paragraph{detectMimeType}
 
 \subsubsection {Testability}
+
+\paragraph{uploadResources}
+Some unit testing has been undertaken by the implementation team; however, as became clear, this code does not work as expected. On a positive note, the use of modularisation does help in separating out functionalities and being able to focus on the individual functions. 
 
 \paragraph{removeResource}
 removeResource has a complete lack of testability due to it not conforming to proper unit testing standards (making use of callbacks, depending on a live database etc.).
 
+\paragraph{detectMimeType}
+
 \subsubsection {Security}
+
+\paragraph{uploadResources}
+There does not seem to be to be any limit imposed on the length of the description to be provided as part of the function parameters. There is the risk that someone could attempt to upload a significant amount of information, potentially malware, onto the server via this input value, potentially causing issues. 
 
 \paragraph{removeResource}
 The only security concern would be an incorrect ID being used in order to remove a different resource than required, potentially putting the system at risk.
 
+\paragraph{detectMimeType}
+
 \subsubsection {Reliability}
+
+\paragraph{uploadResources}
+The use case does not work as expected and can therefore not be described as being 
 
 \paragraph{removeResource}
 According to the failure of the post-condition, removeResource gives a poor indication with regards to reliability.
 
+\paragraph{detectMimeType}
+
 \subsubsection {Reusability}
+If the use case does not work, it can be argued that there is no scope for reusability.
+
+\paragraph{uploadResources}
 
 \paragraph{removeResource}
 removeResource is not very reusable due to the dependence on a single database. Using this function throughout this system would not be possible/practical.
 
+\paragraph{detectMimeType}
+
 \subsubsection {Pluggability}
+
+\paragraph{uploadResources}
+Due to the absence of use of callbacks in the code, as it currently stands, the code cannot be integrated into the existing implementation structure, and is therefore not pluggable.
 
 \paragraph{removeResource}
 In the same vein as reusability, removeResource cannot be integrated into other systems due to a lack of robustness and versatility.
 
+\paragraph{detectMimeType}
+
 
 \section {Critical Evaluation and Recommendations}
 \subsection {Resources A}
-\subsubsection {Master specification compilance}
+\subsubsection {Master specification compliance}
 The following of the master specification for the implementation was followed correctly to some extent in the resource implementation ,most functions were implemented and worked to some extent,functionality was prioritised over following software principles like having a unit test for each function created and being specific in documentation of functions parameter types .
 
 \subsection {Resources B}
