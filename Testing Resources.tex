@@ -85,6 +85,19 @@ The pre-condition will be that there exist resources in the database prior to th
 \paragraph{getResourcesRelated}
 The pre-condition will be that the appraisal type (RelatedID) that is sent in as a parameter does exist in the database prior to this execution. There are no violations of this pre-condition. 
 
+\paragraph{removeResource}
+The pre-conditions which in this case is resource ID being passed as a parameter to removeResource, the ID must exist in the databaase for a resource to be removed.
+
+\paragraph{addResourceType}
+The pre-condition will be the MIME type passed would be a valid and existing MIME type and the size limit would be a valid size which would be stated in bytes.
+
+The pre-condition can be violated by passing the MIME type that does not exist and the function will just add the size limit and the MIME type to the Resources contraints in the database.
+
+\paragraph{removeResourceType}
+The objectID passed as a parameter must conform to a hexadecimal sequence. If the objectID specified is not hexadecimal, the function returns false.
+
+\paragraph{updateResourceType}
+The pre-conditions which in this case is the constraintID passed as a parameter which is the ID of the constraint to be updated must exist in Resources contraints in the database and sizeLimit which is the new size limit of the constraint must be stated in bytes.
 \subsubsection {Post-condition violations}
 
 \paragraph{getResourcesBySpaceId}
@@ -96,6 +109,19 @@ The post-condition will be that all of the resources in the database will be ret
 \paragraph{getResourcesRelated}
 The post-condition will be that the resources that exist in the database of the specified appraisal type will be returned. This post-condition fails, because the function queries the database and returns all of the resources in the database, which is incorrect.
 
+\paragraph{removeResource}
+The post condition will be the removal of the specified resource by ID in the database.
+
+The removeResource does not conform to the post-condition as it cannnot remove the resource that exist in the database with the specified ID.
+
+\paragraph{addResourceType}
+The post-condition is when the size limit and the MIME type would be added to the Resources contraints in the database.
+
+\paragraph{removeResourceType}
+The objectID which is the ID of the constraint to be removed from Resources contraints in the database will be removed.
+
+\paragraph{updateResourceType}
+The constraint with the specified constraintID in Resources contraints in the database will be updated by the new size limit.
 \subsubsection {Data structure requirements}
 
 \paragraph{getResourcesBySpaceId}
