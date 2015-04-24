@@ -164,6 +164,9 @@ This function does not suffer from performance issues. The performance of this f
 \paragraph{getResourcesAll}
 This function does not suffer from performance issues. The performance of this function depends on the connection and communication speed of the database.
 
+\paragraph{addingConstraint,removeConstraint and updateConstraint}
+Connection to the database takes longer adding Constraint response time is unrealistic for the system as it takes longer.
+
 \paragraph{getResourcesRelated}
 This function does not suffer from performance issues. The performance of this function depends on the connection and communication speed of the database.
 
@@ -189,6 +192,9 @@ This function is easy to test, as it can be tested from the interfaces that was 
 \paragraph{getResourcesRelated}
 This function is easy to test, as it can be tested from the interfaces that was created.
 
+\paragraph{addingConstraint,removeConstraint and updateConstraint}
+No unit test created for testing of each functions implemented and provided testing is in the app.js file which caters the interface side of the function,however adding Constraint and other functions result in too long to response exception being thrown by the browser as connection with the database is not well established and fails.
+
 \subsubsection {Security}
 
 \paragraph{getResourcesBySpaceId}
@@ -200,6 +206,9 @@ This function is secure, as it only retrieves information from the database, abo
 \paragraph{getResourcesRelated}
 This function is secure, as it only retrieves information from the database, about all of the resources of a certain appraisal type.
 
+\paragraph{addingConstraint}
+Interface is not secured in the client side adding Constraint section does not validate user input and adds the given input to the database without any validation ,the only validation is on the server side where it checks if the input is not already in the database.
+
 \subsubsection {Reliability}
 
 \paragraph{getResourcesBySpaceId}
@@ -210,6 +219,10 @@ This function is reliable as it conforms to the post-condition. The function ret
 
 \paragraph{getResourcesRelated}
 This function is very unreliable, because it does not conform to the post-condition. It returns a list of all of the resources, instead of only returning a list of resources of a certain appraisal type.
+
+\paragraph{addingConstraint,removeConstraint and updateConstraint}
+Lack of input validation results in garbage data entered in the database,which result in unreliable results and connection to database takes too long or results in browser throwing an exception for taking too long to respond,thus module is not reliable to complete a task base on this factors.
+
 
 \subsubsection {Reusability}
 
@@ -245,6 +258,8 @@ removeResource demonstrates usability by being simple and easy to use. The funct
 
 \paragraph{removeResource}
 removeResource does not suffer from any performance issues in and of itself, however should the database maintain a sizeable stature, removeResource will be seen to suffer in performance. This is to be expected.
+performance
+
 
 \subsubsection {Scalability}
 
@@ -279,6 +294,9 @@ In the same vein as reusability, removeResource cannot be integrated into other 
 
 \section {Critical Evaluation and Recommendations}
 \subsection {Resources A}
+\subsubsection {Master specification compilance}
+The following of the master specification for the implementation was followed correctly to some extent in the resource implementation ,most functions were implemented and worked to some extent,functionality was prioritised over following software principles like having a unit test for each function created and being specific in documentation of functions parameter types .
+
 \subsection {Resources B}
 \subsubsection {Code and code structure legibility}
 The code has some degree of JSDoc comments, but could have benefited from a more comprehensive commenting system so as to allow newcomers to the code to better understand the program logic. The use of an explanatory README file would also have been welcomed by the testing team and others new to the work to help understand the logic behind the system implemented. Thus, from a code legibility point of view, there are some improvements that can be made to make the existing code more user-friendly. On a positive note, the code does make use of modularisation in the sense the additional functionalities are separated out from the main use case, making it easier to understand, and perhaps also easier to test the code.
