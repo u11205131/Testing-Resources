@@ -1,94 +1,111 @@
-\contentsline {section}{\numberline {1}Introduction}{2}
-\contentsline {section}{\numberline {2}Functional Testing}{2}
-\contentsline {subsection}{\numberline {2.1}Resources A}{2}
-\contentsline {subsubsection}{\numberline {2.1.1}Pre-condition violations}{2}
-\contentsline {paragraph}{getResourcesBySpaceId}{2}
-\contentsline {paragraph}{getResourcesAll}{2}
-\contentsline {paragraph}{getResourcesRelated}{3}
-\contentsline {paragraph}{removeResource}{3}
-\contentsline {paragraph}{addResourceType}{3}
-\contentsline {paragraph}{removeResourceType}{3}
-\contentsline {paragraph}{updateResourceType}{3}
-\contentsline {subsubsection}{\numberline {2.1.2}Post-condition violations}{3}
-\contentsline {paragraph}{getResourcesBySpaceId}{3}
-\contentsline {paragraph}{getResourcesAll}{3}
-\contentsline {paragraph}{getResourcesRelated}{3}
-\contentsline {paragraph}{removeResource}{3}
-\contentsline {paragraph}{addResourceType (addConstraint)}{3}
-\contentsline {paragraph}{removeResourceType (removeConstraint)}{4}
-\contentsline {paragraph}{updateResourceType (updateConstraint)}{4}
-\contentsline {subsubsection}{\numberline {2.1.3}Data structure requirements}{4}
-\contentsline {paragraph}{getResourcesBySpaceId}{4}
-\contentsline {paragraph}{getResourcesAll}{4}
-\contentsline {paragraph}{getResourcesRelated}{4}
-\contentsline {subsection}{\numberline {2.2}Resources B}{4}
-\contentsline {subsubsection}{\numberline {2.2.1}Pre-condition violations}{6}
-\contentsline {paragraph}{uploadResources}{6}
-\contentsline {paragraph}{downloadResource}{6}
-\contentsline {paragraph}{removeResource}{6}
-\contentsline {paragraph}{detectMimeType}{6}
-\contentsline {subsubsection}{\numberline {2.2.2}Post-condition violations}{7}
-\contentsline {paragraph}{removeResource}{7}
-\contentsline {subsubsection}{\numberline {2.2.3}Data structure requirements}{7}
-\contentsline {paragraph}{removeResource}{7}
-\contentsline {section}{\numberline {3}Non-functional testing / assessment}{7}
-\contentsline {subsection}{\numberline {3.1}Resources A}{7}
-\contentsline {subsubsection}{\numberline {3.1.1}Usability}{7}
-\contentsline {paragraph}{getResourcesBySpaceId}{7}
-\contentsline {paragraph}{getResourcesAll}{7}
-\contentsline {paragraph}{getResourcesRelated}{8}
-\contentsline {subsubsection}{\numberline {3.1.2}Performance}{8}
-\contentsline {paragraph}{getResourcesBySpaceId}{8}
-\contentsline {paragraph}{getResourcesAll}{8}
-\contentsline {paragraph}{addingConstraint,removeConstraint and updateConstraint}{8}
-\contentsline {paragraph}{getResourcesRelated}{8}
-\contentsline {subsubsection}{\numberline {3.1.3}Scalability}{8}
-\contentsline {paragraph}{getResourcesBySpaceId}{8}
-\contentsline {paragraph}{getResourcesAll}{8}
-\contentsline {paragraph}{getResourcesRelated}{8}
-\contentsline {subsubsection}{\numberline {3.1.4}Testability}{8}
-\contentsline {paragraph}{getResourcesBySpaceId}{8}
-\contentsline {paragraph}{getResourcesAll}{8}
-\contentsline {paragraph}{getResourcesRelated}{8}
-\contentsline {paragraph}{addingConstraint,removeConstraint and updateConstraint}{9}
-\contentsline {subsubsection}{\numberline {3.1.5}Security}{9}
-\contentsline {paragraph}{getResourcesBySpaceId}{9}
-\contentsline {paragraph}{getResourcesAll}{9}
-\contentsline {paragraph}{getResourcesRelated}{9}
-\contentsline {paragraph}{addingConstraint}{9}
-\contentsline {subsubsection}{\numberline {3.1.6}Reliability}{9}
-\contentsline {paragraph}{getResourcesBySpaceId}{9}
-\contentsline {paragraph}{getResourcesAll}{9}
-\contentsline {paragraph}{getResourcesRelated}{9}
-\contentsline {paragraph}{addingConstraint,removeConstraint and updateConstraint}{9}
-\contentsline {subsubsection}{\numberline {3.1.7}Reusability}{9}
-\contentsline {paragraph}{getResourcesBySpaceId}{9}
-\contentsline {paragraph}{getResourcesAll}{10}
-\contentsline {paragraph}{getResourcesRelated}{10}
-\contentsline {subsubsection}{\numberline {3.1.8}Pluggability}{10}
-\contentsline {paragraph}{getResourcesBySpaceId}{10}
-\contentsline {paragraph}{getResourcesAll}{10}
-\contentsline {paragraph}{getResourcesRelated}{10}
-\contentsline {subsection}{\numberline {3.2}Resources B}{10}
-\contentsline {subsubsection}{\numberline {3.2.1}Usability}{10}
-\contentsline {paragraph}{removeResource}{10}
-\contentsline {subsubsection}{\numberline {3.2.2}Performance}{10}
-\contentsline {paragraph}{removeResource}{10}
-\contentsline {subsubsection}{\numberline {3.2.3}Scalability}{10}
-\contentsline {paragraph}{removeResource}{10}
-\contentsline {subsubsection}{\numberline {3.2.4}Testability}{11}
-\contentsline {paragraph}{removeResource}{11}
-\contentsline {subsubsection}{\numberline {3.2.5}Security}{11}
-\contentsline {paragraph}{removeResource}{11}
-\contentsline {subsubsection}{\numberline {3.2.6}Reliability}{11}
-\contentsline {paragraph}{removeResource}{11}
-\contentsline {subsubsection}{\numberline {3.2.7}Reusability}{11}
-\contentsline {paragraph}{removeResource}{11}
-\contentsline {subsubsection}{\numberline {3.2.8}Pluggability}{11}
-\contentsline {paragraph}{removeResource}{11}
-\contentsline {section}{\numberline {4}Critical Evaluation and Recommendations}{11}
-\contentsline {subsection}{\numberline {4.1}Resources A}{11}
-\contentsline {subsubsection}{\numberline {4.1.1}Master specification compilance}{11}
-\contentsline {subsection}{\numberline {4.2}Resources B}{11}
-\contentsline {subsubsection}{\numberline {4.2.1}Code and code structure legibility}{11}
-\contentsline {section}{\numberline {5}References}{12}
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {section}{\numberline {2}Functional Testing}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Resources A}{2}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Pre-condition violations}{2}{subsubsection.2.1.1}
+\contentsline {paragraph}{uploadResources}{2}{section*.2}
+\contentsline {paragraph}{getResourcesBySpaceId}{3}{section*.3}
+\contentsline {paragraph}{getResourcesAll}{3}{section*.4}
+\contentsline {paragraph}{getResourcesRelated}{3}{section*.5}
+\contentsline {paragraph}{removeResource}{3}{section*.6}
+\contentsline {paragraph}{addResourceType}{3}{section*.7}
+\contentsline {paragraph}{removeResourceType}{3}{section*.8}
+\contentsline {paragraph}{updateResourceType}{3}{section*.9}
+\contentsline {subsubsection}{\numberline {2.1.2}Post-condition violations}{3}{subsubsection.2.1.2}
+\contentsline {paragraph}{uploadResources}{3}{section*.10}
+\contentsline {paragraph}{getResourcesBySpaceId}{4}{section*.11}
+\contentsline {paragraph}{getResourcesAll}{4}{section*.12}
+\contentsline {paragraph}{getResourcesRelated}{4}{section*.13}
+\contentsline {paragraph}{removeResource}{4}{section*.14}
+\contentsline {paragraph}{addResourceType (addConstraint)}{4}{section*.15}
+\contentsline {paragraph}{removeResourceType (removeConstraint)}{4}{section*.16}
+\contentsline {paragraph}{updateResourceType (updateConstraint)}{4}{section*.17}
+\contentsline {subsubsection}{\numberline {2.1.3}Data structure requirements}{4}{subsubsection.2.1.3}
+\contentsline {paragraph}{uploadResources}{4}{section*.18}
+\contentsline {paragraph}{getResourcesBySpaceId}{4}{section*.19}
+\contentsline {paragraph}{getResourcesAll}{4}{section*.20}
+\contentsline {paragraph}{getResourcesRelated}{4}{section*.21}
+\contentsline {subsection}{\numberline {2.2}Resources B}{5}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Pre-condition violations}{6}{subsubsection.2.2.1}
+\contentsline {paragraph}{uploadResources}{6}{section*.22}
+\contentsline {paragraph}{downloadResource}{7}{section*.23}
+\contentsline {paragraph}{removeResource}{7}{section*.24}
+\contentsline {paragraph}{detectMimeType}{7}{section*.25}
+\contentsline {subsubsection}{\numberline {2.2.2}Post-condition violations}{8}{subsubsection.2.2.2}
+\contentsline {paragraph}{uploadResources}{8}{section*.26}
+\contentsline {paragraph}{removeResource}{8}{section*.27}
+\contentsline {paragraph}{downloadResource}{8}{section*.28}
+\contentsline {paragraph}{detectMimeType}{8}{section*.29}
+\contentsline {subsubsection}{\numberline {2.2.3}Data structure requirements}{8}{subsubsection.2.2.3}
+\contentsline {paragraph}{uploadResources}{8}{section*.30}
+\contentsline {paragraph}{removeResource}{8}{section*.31}
+\contentsline {paragraph}{downloadResource}{8}{section*.32}
+\contentsline {paragraph}{detectMimeType}{8}{section*.33}
+\contentsline {section}{\numberline {3}Non-functional testing / assessment}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}Resources A}{9}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Usability}{9}{subsubsection.3.1.1}
+\contentsline {paragraph}{uploadResources}{9}{section*.34}
+\contentsline {paragraph}{getResourcesBySpaceId}{9}{section*.35}
+\contentsline {paragraph}{getResourcesAll}{9}{section*.36}
+\contentsline {paragraph}{getResourcesRelated}{9}{section*.37}
+\contentsline {subsubsection}{\numberline {3.1.2}Performance}{9}{subsubsection.3.1.2}
+\contentsline {paragraph}{uploadResources}{9}{section*.38}
+\contentsline {paragraph}{getResourcesBySpaceId}{9}{section*.39}
+\contentsline {paragraph}{getResourcesAll}{9}{section*.40}
+\contentsline {paragraph}{addingConstraint,removeConstraint and updateConstraint}{9}{section*.41}
+\contentsline {paragraph}{getResourcesRelated}{9}{section*.42}
+\contentsline {subsubsection}{\numberline {3.1.3}Scalability}{10}{subsubsection.3.1.3}
+\contentsline {paragraph}{uploadResources}{10}{section*.43}
+\contentsline {paragraph}{getResourcesBySpaceId}{10}{section*.44}
+\contentsline {paragraph}{getResourcesAll}{10}{section*.45}
+\contentsline {paragraph}{getResourcesRelated}{10}{section*.46}
+\contentsline {subsubsection}{\numberline {3.1.4}Testability}{10}{subsubsection.3.1.4}
+\contentsline {paragraph}{uploadResources}{10}{section*.47}
+\contentsline {paragraph}{getResourcesBySpaceId}{10}{section*.48}
+\contentsline {paragraph}{getResourcesAll}{10}{section*.49}
+\contentsline {paragraph}{getResourcesRelated}{10}{section*.50}
+\contentsline {paragraph}{addingConstraint,removeConstraint and updateConstraint}{10}{section*.51}
+\contentsline {subsubsection}{\numberline {3.1.5}Security}{10}{subsubsection.3.1.5}
+\contentsline {paragraph}{uploadResources}{10}{section*.52}
+\contentsline {paragraph}{getResourcesBySpaceId}{11}{section*.53}
+\contentsline {paragraph}{getResourcesAll}{11}{section*.54}
+\contentsline {paragraph}{getResourcesRelated}{11}{section*.55}
+\contentsline {paragraph}{addingConstraint}{11}{section*.56}
+\contentsline {subsubsection}{\numberline {3.1.6}Reliability}{11}{subsubsection.3.1.6}
+\contentsline {paragraph}{uploadResources}{11}{section*.57}
+\contentsline {paragraph}{getResourcesBySpaceId}{11}{section*.58}
+\contentsline {paragraph}{getResourcesAll}{11}{section*.59}
+\contentsline {paragraph}{getResourcesRelated}{11}{section*.60}
+\contentsline {paragraph}{addingConstraint,removeConstraint and updateConstraint}{11}{section*.61}
+\contentsline {subsubsection}{\numberline {3.1.7}Reusability}{12}{subsubsection.3.1.7}
+\contentsline {paragraph}{uploadResources}{12}{section*.62}
+\contentsline {paragraph}{getResourcesBySpaceId}{12}{section*.63}
+\contentsline {paragraph}{getResourcesAll}{12}{section*.64}
+\contentsline {paragraph}{getResourcesRelated}{12}{section*.65}
+\contentsline {subsubsection}{\numberline {3.1.8}Pluggability}{12}{subsubsection.3.1.8}
+\contentsline {paragraph}{uploadResources}{12}{section*.66}
+\contentsline {paragraph}{getResourcesBySpaceId}{12}{section*.67}
+\contentsline {paragraph}{getResourcesAll}{12}{section*.68}
+\contentsline {paragraph}{getResourcesRelated}{12}{section*.69}
+\contentsline {subsection}{\numberline {3.2}Resources B}{12}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Usability}{13}{subsubsection.3.2.1}
+\contentsline {paragraph}{removeResource}{13}{section*.70}
+\contentsline {subsubsection}{\numberline {3.2.2}Performance}{13}{subsubsection.3.2.2}
+\contentsline {paragraph}{removeResource}{13}{section*.71}
+\contentsline {subsubsection}{\numberline {3.2.3}Scalability}{13}{subsubsection.3.2.3}
+\contentsline {paragraph}{removeResource}{13}{section*.72}
+\contentsline {subsubsection}{\numberline {3.2.4}Testability}{13}{subsubsection.3.2.4}
+\contentsline {paragraph}{removeResource}{13}{section*.73}
+\contentsline {subsubsection}{\numberline {3.2.5}Security}{13}{subsubsection.3.2.5}
+\contentsline {paragraph}{removeResource}{13}{section*.74}
+\contentsline {subsubsection}{\numberline {3.2.6}Reliability}{13}{subsubsection.3.2.6}
+\contentsline {paragraph}{removeResource}{13}{section*.75}
+\contentsline {subsubsection}{\numberline {3.2.7}Reusability}{13}{subsubsection.3.2.7}
+\contentsline {paragraph}{removeResource}{13}{section*.76}
+\contentsline {subsubsection}{\numberline {3.2.8}Pluggability}{13}{subsubsection.3.2.8}
+\contentsline {paragraph}{removeResource}{13}{section*.77}
+\contentsline {section}{\numberline {4}Critical Evaluation and Recommendations}{14}{section.4}
+\contentsline {subsection}{\numberline {4.1}Resources A}{14}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Master specification compilance}{14}{subsubsection.4.1.1}
+\contentsline {subsection}{\numberline {4.2}Resources B}{14}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Code and code structure legibility}{14}{subsubsection.4.2.1}
+\contentsline {section}{\numberline {5}References}{14}{section.5}

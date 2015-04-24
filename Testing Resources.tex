@@ -32,6 +32,7 @@
 \usepackage{epstopdf}
 \DeclareGraphicsExtensions{.jpg}
 \usepackage{float}
+\usepackage{hyperref}
 
 \begin{document}
 
@@ -70,6 +71,7 @@ The functional requirements postconditions for this use case included the need t
 \item check that the resource persisted
 \item check that the URL for the resource was created
 \end{itemize}
+\textbf{Note to the lecturers: the testing resources group had to import the Resources A code repository into the GitHub repository to allow access to the code to all members. This may lead to the appearance of a skew in the git contributions, when this is not the case.}
 
 \section {Functional Testing}
 
@@ -157,8 +159,7 @@ None of the functions or use cases for Resources B make use of callbacks.
 
 \textit{ "Nearly everything in node uses callbacks […] Callbacks are functions that are executed asynchronously, or at a later time. Instead of the code reading top to bottom procedurally, async programs may execute different functions at different times based on the order and speed that earlier functions like http requests or file system reads happen."}
 
- %(github.com/maxogden/art-of-node#callbacks).
-
+\url{github.com/maxogden/art-of-node#callbacks}
 
 The implementation code makes an attempt to allow for the creation of modules for export, but since all the functions, including the main use case, are all object or value-returning functions, it can be said that the code fails, outright, all its services contracts. This is due to the fact that the Resources B code, as it currently stands, cannot be unit tested or integrated into the main code framework for the project. 
 The Testing Resources B team undertook an attempt to write unit testing code, working with the existing code structure, rather than amending it other than by introducing a callback to the \texttt{uploadResources} function, in order to be able to test the code for compliance with both functional and non-functional requirements. The code did not run and terminated in an error message stating \texttt{“Error: Cannot find module ‘DataBaseStuff’”}. It seems, therefore that one of the modules is missing from the code structure and, as such, the code could not be tested by means of callbacks.
@@ -235,13 +236,32 @@ the code also happily returned a true value. It seems that neither the the unit 
 
 \subsubsection {Post-condition violations}
 
+\paragraph{uploadResources}
+There is a folder with images and music files, but the code seems to make the presumption that there is a server in place that can handle the uploads. Since the \texttt{uploadResources} use case was not included in the unit testing, since the unit testing code has proved itself to be defective, and since many of the functionalities, such as mimetype detection, which \texttt{uploadResources} depends on, do not work themselves, it is concluded that the uploading of resources has not persisted to the database. No URLs seems to be created for the uploaded files. 
+
 \paragraph{removeResource}
 The post-condition of removeResource would be the removal of an entry. Due to a lack of unit testing functionality, the post-condition fails as there is no visible indication of removeResource working.
 
+\paragraph{downloadResource}
+Since resources could not be uploaded to the database, resources could consequently not be downloaded.
+
+\paragraph{detectMimeType}
+The mimetypes were not correctly identified.
+
 \subsubsection {Data structure requirements}
 
+\paragraph{uploadResources}
+The \texttt{uploadResource} use case calls a filepath to an object to be uploaded, rather than an object or data structure itself. No data structures have been specified as required in the master specification document, and none were required.
+
 \paragraph{removeResource}
-No data structure requirements mentioned in the service contract, nor does removeResource utilise any data structures.
+No data structure requirements mentioned in the service contract, nor does \texttt{removeResource} utilise any data structures.
+
+\paragraph{downloadResource}
+The \texttt{downloadResource} use case calls a filepath to an object to be uploaded, rather than an object or data structure itself. No data structures were required for this use case.
+
+\paragraph{detectMimeType}
+
+The \texttt{detectMimeType} use case calls a filepath to an object to be uploaded, rather than an object or data structure itself. No data structures were required for this use case.
 
 \section {Non-functional testing / assessment}
 \subsection {Resources A}
