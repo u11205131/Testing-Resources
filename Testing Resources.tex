@@ -213,7 +213,14 @@ the code still executes successfully. It appears that the unit testing for this 
 The required pre-conditions for this use case include the need for testing the validity of the mimetype that is sent through, as well as a parameter to limit the size limit the size of the mimetype change, presumably to avoid potential malpractice. The unit testing code as provided by the implementation team was not considered to be reliable in the testing of this use case, and since the modifyResourceType function appears to be a Boolean returning function, rather than actually modifying the specified item in the database, it can be concluded that this use case is violating its required pre-conditions.
 
 \paragraph{addResourceType}
-The pre-condition of addResourceType is assumed to be valid data. Tests for empty strings and resource types that do not belong to the MIME types were passed, without exceptions being thrown.
+The addResourceType use case was specified as part of the use case diagram (p 28 of the master specification document (SOLMS \textit{et al}, 2015)), however its services requirements were not explicitly stated in the document. It is assumed, though, that the implementation of this use case attempts to fulfil the pre-conditions which are the resource type, or mimetype, and the file size, and should throw an exception in the case where
+\begin{itemize}
+\item The mimetype is syntactically incorrect
+\item The file size is not an string containing integer values
+\end{itemize}
+
+The pre-condition of \texttt{addResourceType} is assumed to be valid data. Tests for empty strings and resource types that do not belong to the mimetypes were passed, without exceptions being thrown.
+
 
 \paragraph{removeResourceType}
 The pre-condition of removeResourceType is assumed to be valid data. Tests for empty strings and resource types that do not belong to the MIME types were passed, without exceptions being thrown. There were also no exceptions thrown for types that have not been added.
@@ -251,14 +258,18 @@ the code also happily returned a true value. It seems that neither the the unit 
 \paragraph{uploadResources}
 There is a folder with images and music files, but the code seems to make the presumption that there is a server in place that can handle the uploads. Since the \texttt{uploadResources} use case was not included in the unit testing, since the unit testing code has proved itself to be defective, and since many of the functionalities, such as mimetype detection, which \texttt{uploadResources} depends on, do not work themselves, it is concluded that the uploading of resources has not persisted to the database. No URLs seems to be created for the uploaded files. 
 
+\paragraph{downloadResource}
+Since resources could not be uploaded to the database, resources could consequently not be downloaded.
+
 \paragraph{modifyResourceType}
 It is not clear whether the items uploaded to the database are actually persisting. There is a folder with images and music files, but the code seems to make the presumption that there is a server in place that can handle the uploads.
+
+\paragraph{addResourceType}
+The mimetypes are added as a constraint, as required, but it is not clear to which field in the database, or file structure, the mimetypes and there sizes are added.
 
 \paragraph{removeResource}
 The post-condition of removeResource would be the removal of an entry. Due to a lack of unit testing functionality, the post-condition fails as there is no visible indication of removeResource working.
 
-\paragraph{downloadResource}
-Since resources could not be uploaded to the database, resources could consequently not be downloaded.
 
 \paragraph{detectMimeType}
 The mimetypes were not correctly identified.
@@ -269,7 +280,7 @@ The mimetypes were not correctly identified.
 The \texttt{uploadResource} use case calls a filepath to an object to be uploaded, rather than an object or data structure itself. No data structures have been specified as required in the master specification document, and none were required.
 
 \paragraph{addResourceType}
-No data structure requirements mentioned in the service contract. However, \texttt{addResourceType} requires a string value as the only input. Said string must be a MIME type.
+No data structure requirements mentioned in the service contract. However, \texttt{addResourceType} requires a string value as the only input. Said string must be a mimetype.
 
 \paragraph{removeResourceType}
 No data structure requirements mentioned in the service contract. However, \texttt{removeResourceType} requires a string value as the only input. Said string must be a MIME type.

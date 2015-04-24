@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.2.16)  24 APR 2015 19:55
+=======
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.2.16)  24 APR 2015 20:15
+>>>>>>> origin/Msiza
 entering extended mode
 **Testing*Resources.tex
 ("C:\Users\cadebe\Documents\GitHub\Testing-Resources\Testing Resources.tex"
@@ -848,126 +852,218 @@ written for the \EU1/lmtt/m/n/10 uploadResources
  []
 
 [6]
+<<<<<<< HEAD
 Overfull \hbox (7.015pt too wide) in paragraph at lines 219--220
+=======
+Overfull \hbox (7.015pt too wide) in paragraph at lines 226--227
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 removeResourceType[] \EU1/Arial(0)/m/n/10 The pre-cond
 ition of removeResourceType is assumed
  []
 
+<<<<<<< HEAD
 
 Overfull \hbox (8.84279pt too wide) in paragraph at lines 225--226
+=======
+[7]
+Overfull \hbox (8.84279pt too wide) in paragraph at lines 232--233
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 removeResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 Th
 e pre-condition of removeResourceType-
  []
 
+<<<<<<< HEAD
 [7]
 Overfull \hbox (41.1527pt too wide) in paragraph at lines 243--244
+=======
+
+Overfull \hbox (41.1527pt too wide) in paragraph at lines 250--251
+>>>>>>> origin/Msiza
 \EU1/Arial(0)/m/n/10 However, when the line \EU1/lmtt/m/n/10 var results = mime
 .detectMimeType("./r/mountain.jpeg"); 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (4.81386pt too wide) in paragraph at lines 252--253
+=======
+Overfull \hbox (4.81386pt too wide) in paragraph at lines 259--260
+>>>>>>> origin/Msiza
 \EU1/Arial(0)/m/n/10 many of the functionalities, such as mimetype detection, w
 hich \EU1/lmtt/m/n/10 uploadResources
  []
 
+<<<<<<< HEAD
 
 Overfull \hbox (10.73898pt too wide) in paragraph at lines 255--256
+=======
+[8]
+Overfull \hbox (10.73898pt too wide) in paragraph at lines 265--266
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 modifyResourceType[] \EU1/Arial(0)/m/n/10 It is not cl
 ear whether the items uploaded to the database
  []
 
+<<<<<<< HEAD
 [8] [9]
 Overfull \hbox (1.17189pt too wide) in paragraph at lines 319--320
+=======
+[9] [10]
+Overfull \hbox (1.17189pt too wide) in paragraph at lines 330--331
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 addingConstraint,removeConstraint and updateConstraint
 [] \EU1/Arial(0)/m/n/10 Connection to
  []
 
+<<<<<<< HEAD
 [10]
 Overfull \hbox (8.19176pt too wide) in paragraph at lines 353--354
+=======
+
+Overfull \hbox (8.19176pt too wide) in paragraph at lines 364--365
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 addingConstraint,removeConstraint and updateConstraint
 [] \EU1/Arial(0)/m/n/10 No unit test cre-
  []
 
 [11] [12] [13] [14]
+<<<<<<< HEAD
 Overfull \hbox (2.00034pt too wide) in paragraph at lines 468--469
+=======
+Overfull \hbox (2.00034pt too wide) in paragraph at lines 479--480
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
 retrieveResourceTypeConstraint does not
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (1.30833pt too wide) in paragraph at lines 468--469
+=======
+Overfull \hbox (1.30833pt too wide) in paragraph at lines 479--480
+>>>>>>> origin/Msiza
 \EU1/Arial(0)/m/n/10 suffer from any performance issues in and of itself, howev
 er should the database
  []
 
+<<<<<<< HEAD
 
 Overfull \hbox (9.05113pt too wide) in paragraph at lines 491--492
+=======
+[15]
+Overfull \hbox (9.05113pt too wide) in paragraph at lines 502--503
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 removeResourceType[] \EU1/Arial(0)/m/n/10 removeResour
 ceType offers no solutions to removeRe-
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (2.36655pt too wide) in paragraph at lines 494--495
+=======
+Overfull \hbox (2.36655pt too wide) in paragraph at lines 505--506
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
 retrieveResourceTypeConstraint offers no
  []
 
+<<<<<<< HEAD
 [15]
 Overfull \hbox (4.20737pt too wide) in paragraph at lines 520--521
+=======
+
+Overfull \hbox (4.20737pt too wide) in paragraph at lines 531--532
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
 retrieveResourceTypeConstraint seems to
  []
 
+<<<<<<< HEAD
 
 Overfull \hbox (5.15141pt too wide) in paragraph at lines 531--532
+=======
+[16]
+Overfull \hbox (5.15141pt too wide) in paragraph at lines 542--543
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 downloadResource[] \EU1/Arial(0)/m/n/10 There should n
 ot be any security issues involved in down-
  []
 
+<<<<<<< HEAD
 [16]
 Overfull \hbox (6.62599pt too wide) in paragraph at lines 546--547
+=======
+
+Overfull \hbox (6.62599pt too wide) in paragraph at lines 557--558
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
 retrieveResourceTypeConstraint has no in-
  []
 
+<<<<<<< HEAD
 
 Overfull \hbox (8.14099pt too wide) in paragraph at lines 567--568
+=======
+[17]
+Overfull \hbox (8.14099pt too wide) in paragraph at lines 578--579
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 addResourceType[] \EU1/Arial(0)/m/n/10 According to th
 e failure of the post-condition, addResource-
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (12.58435pt too wide) in paragraph at lines 570--571
+=======
+Overfull \hbox (12.58435pt too wide) in paragraph at lines 581--582
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 removeResourceType[] \EU1/Arial(0)/m/n/10 According to
  the failure of the post-condition, removeRe-
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (11.65042pt too wide) in paragraph at lines 573--574
+=======
+Overfull \hbox (11.65042pt too wide) in paragraph at lines 584--585
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
 According to the failure of the post-condition,
  []
 
+<<<<<<< HEAD
 [17]
 Overfull \hbox (8.28127pt too wide) in paragraph at lines 599--600
+=======
+
+Overfull \hbox (8.28127pt too wide) in paragraph at lines 610--611
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
 retrieveResourceTypeConstraint is not very
  []
 
 [18]
+<<<<<<< HEAD
 Overfull \hbox (0.52705pt too wide) in paragraph at lines 622--623
+=======
+Overfull \hbox (0.52705pt too wide) in paragraph at lines 633--634
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 removeResourceType[] \EU1/Arial(0)/m/n/10 In the same 
 vein as reusability, removeResourceType
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (2.72432pt too wide) in paragraph at lines 625--626
+=======
+Overfull \hbox (2.72432pt too wide) in paragraph at lines 636--637
+>>>>>>> origin/Msiza
  []\EU1/Arial(0)/bx/n/10 retrieveResourceTypeConstraint[] \EU1/Arial(0)/m/n/10 
 In the same vein as reusability, retrieveRe-
  []
 
 [19]
+<<<<<<< HEAD
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 650.
  [20]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 650.
@@ -976,11 +1072,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 650.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 650.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 650.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 650.
+=======
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 661.
+ [20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 661.
+
+("C:\Users\cadebe\Documents\GitHub\Testing-Resources\Testing Resources.aux")
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 661.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 661.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 661.
+>>>>>>> origin/Msiza
  ) 
 Here is how much of TeX's memory you used:
  19962 strings out of 429025
  370019 string characters out of 3167800
+<<<<<<< HEAD
  419083 words of memory out of 3000000
+=======
+ 420160 words of memory out of 3000000
+>>>>>>> origin/Msiza
  23033 multiletter control sequences out of 15000+200000
  6928 words of font info for 48 fonts, out of 3000000 for 9000
  912 hyphenation exceptions out of 8191
