@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.2.16)  24 APR 2015 19:13
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.2.16)  24 APR 2015 13:45
 entering extended mode
 **Testing*Resources.tex
 ("C:\Users\cadebe\Documents\GitHub\Testing-Resources\Testing Resources.tex"
@@ -415,30 +415,30 @@ LaTeX Info: Redefining \upshape on input line 2102.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fontspec\fontspec.cfg")))
 \g__file_internal_ior=\read1
 Requested font "Arial" at 10.0pt
- -> ñ^^M/Windows/Fonts/arial.ttf
+ -> ú^^M/Windows/Fonts/arial.ttf
 Requested font "Arial/ICU" at 10.0pt
- -> ß^^M/Windows/Fonts/arial.ttf
+ -> è^^M/Windows/Fonts/arial.ttf
 \g_fontspec_family_Arial_int=\count123
 Requested font "Arial/ICU" at 10.0pt
- -> Ú^^O/Windows/Fonts/arial.ttf
+ -> ã^^O/Windows/Fonts/arial.ttf
 Requested font "Arial/ICU" at 10.0pt
- -> Ý^^O/Windows/Fonts/arial.ttf
+ -> æ^^O/Windows/Fonts/arial.ttf
 Requested font "Arial/B/ICU" at 10.0pt
- -> à^^O/Windows/Fonts/arialbd.ttf
+ -> é^^O/Windows/Fonts/arialbd.ttf
 Requested font "Arial/B/ICU" at 10.0pt
- -> æ^^O/Windows/Fonts/arialbd.ttf
+ -> ï^^O/Windows/Fonts/arialbd.ttf
 Requested font "Arial/ICU" at 10.0pt
- -> é^^O/Windows/Fonts/arial.ttf
+ -> ò^^O/Windows/Fonts/arial.ttf
 Requested font "Arial/I/ICU" at 10.0pt
- -> ì^^O/Windows/Fonts/ariali.ttf
+ -> õ^^O/Windows/Fonts/ariali.ttf
 Requested font "Arial/I/ICU" at 10.0pt
- -> ò^^O/Windows/Fonts/ariali.ttf
+ -> û^^O/Windows/Fonts/ariali.ttf
 Requested font "Arial/ICU" at 10.0pt
- -> õ^^O/Windows/Fonts/arial.ttf
-Requested font "Arial/BI/ICU" at 10.0pt
- -> ø^^O/Windows/Fonts/arialbi.ttf
+ -> ÿÿ/Windows/Fonts/arial.ttf
 Requested font "Arial/BI/ICU" at 10.0pt
  -> ÿÿ/Windows/Fonts/arialbi.ttf
+Requested font "Arial/BI/ICU" at 10.0pt
+ -> ^^K
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -459,7 +459,7 @@ Requested font "Arial/BI/ICU" at 10.0pt
 . <->"Arial/BI/ICU:script=latn;language=DFLT;"
 .................................................
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 10.0pt
- -> ^^H
+ -> ^^Q
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
@@ -745,13 +745,13 @@ LaTeX Info: Redefining \nameref on input line 37.
 ("C:\Users\cadebe\Documents\GitHub\Testing-Resources\Testing Resources.out")
 \@outlinefile=\write3
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 17.28pt
- -> ^^Z
+ -> #
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 12.0pt
- -> M
+ -> V
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 8.0pt
- -> S
+ -> \
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 6.0pt
- -> Y
+ -> b
 Requested font "cmmi12" at 12.0pt
 Requested font "cmmi8" at 8.0pt
 Requested font "cmmi6" at 6.0pt
@@ -768,7 +768,7 @@ Requested font "cmr12" at 12.0pt
 Requested font "cmr8" at 8.0pt
 Requested font "cmr6" at 6.0pt
 Requested font "Arial/I/ICU:script=latn;language=DFLT;" at 12.0pt
- -> Ë
+ -> Ô
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\se-ascii-print.def"
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
@@ -778,16 +778,16 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 ]
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 14.4pt
- -> \
+ -> e
 Requested font "Arial/B/ICU:script=latn;language=DFLT;" at 14.4pt
- -> ,
+ -> 5
  ("C:\Users\cadebe\Documents\GitHub\Testing-Resources\Testing Resources.toc"
 Requested font "Arial/B/ICU:script=latn;language=DFLT;" at 10.0pt
- -> G^^O/Windows/Fonts/arialbd.ttf
+ -> P^^O/Windows/Fonts/arialbd.ttf
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 7.0pt
- -> e^^O/Windows/Fonts/arial.ttf
+ -> n^^O/Windows/Fonts/arial.ttf
 Requested font "Arial/ICU:script=latn;language=DFLT;" at 5.0pt
- -> k^^O/Windows/Fonts/arial.ttf
+ -> t^^O/Windows/Fonts/arial.ttf
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -796,7 +796,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
  [1]
 Requested font "Arial/I/ICU:script=latn;language=DFLT;" at 10.0pt
- -> ^^83
+ -> ^^8c
 
 Underfull \hbox (badness 10000) in paragraph at lines 53--64
 
@@ -818,7 +818,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--64
  []
 
 Requested font "Arial/B/ICU:script=latn;language=DFLT;" at 12.0pt
- -> ^^M^^D/Windows/Fonts/arialbd.ttf
+ -> ^^V^^D/Windows/Fonts/arialbd.ttf
 [2]
 Overfull \hbox (5.57463pt too wide) in paragraph at lines 85--86
 []\EU1/Arial(0)/m/n/10 The database is queried (albeit erroneously due to logic
@@ -871,15 +871,15 @@ Overfull \hbox (8.19176pt too wide) in paragraph at lines 329--330
 [] \EU1/Arial(0)/m/n/10 No unit test cre-
  []
 
-[10] [11] [12] [13] [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 481.
- [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 481.
+[10] [11] [12] [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 455.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 455.
 
 ("C:\Users\cadebe\Documents\GitHub\Testing-Resources\Testing Resources.aux")
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 481.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 481.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 481.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 455.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 455.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 455.
  ) 
 Here is how much of TeX's memory you used:
  19962 strings out of 429025
@@ -890,4 +890,4 @@ Here is how much of TeX's memory you used:
  912 hyphenation exceptions out of 8191
  46i,6n,45p,10412b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Testing*Resources.pdf (16 pages).
+Output written on Testing*Resources.pdf (15 pages).
