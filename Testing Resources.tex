@@ -162,8 +162,57 @@ In the absence of being able to test via modules and callbacks, the testing team
 
 \subsubsection {Pre-condition violations}
 
+\paragraph{uploadResources} The uploadResources use case function makes an attempt to fulfil the mimetype detection precondition, as well as the \texttt{getResourceTypeConstraints} and throws an exception in the case where
+\begin{itemize}
+\item the file size constraints have not been met
+\item the resource type is not supported
+\item the mimetype could not be detected
+\end{itemize}
+The raising of these exceptions is commensurate with the services contract requirements, as specified in Figure 28 in the master specification document (SOLMS et al, 2015).
+There is no actual unit testing code written for the \texttt{uploadResources} use case. Considering that the other functions pertaining to the uploading of resources do not work, it is expected that this function will fail.
+In terms of the actual code, the mimetype size is tested by means of the line:
+
+\texttt{	file.size <= (constraints.maximumSize * 1000)}
+
+There is no explanation as to why this particular value has been chosen as the file size constraints. Something similar to the notion of a constant value, declared at the head to the file, might have been more appropriate and explanatory in this case.
+In summary, there is an attempt to fulfil the use case pre-conditions by means of inclusion of exceptions for the cases where the preconditions may fail, however, the code fails in cases where erroneous input is added. In such cases the code would have benefited from the application of additional exception throwing to cover these scenarios.
+
+\paragraph{downloadResource} 
+
+This use case calls the line 
+
+\texttt{var results = resources.downloadResource("mountain.jpg");}
+
+and when this line is changed to read
+
+\texttt{var results = resources.downloadResource("mountain");}
+
+the code still executes successfully. It appears that the unit testing for this function is not working correctly, and as such, the use case cannot be tested with the code provided. 
+
 \paragraph{removeResource}
 The pre-condition of removeResource is assumed to refer to the identification number of a resource in the database which should exist prior to this execution. There are no violations of this pre-condition due to error checks being performed to verify whether or not the entry exists.
+
+\paragraph{detectMimeType} 
+There appears to be problems with the mimetype detection functionality. It is hard to see how this function, as it currently stands, will return a value other than true. Running the provided test code for the “Detect Mime Type” seems to confirm this. Each time the code was run, the code executes without fail when tested against various mimetypes. Representatives from the various mimtype groups were used, with emphasis on the ones that are expected to be most frequently used, including:
+\begin{itemize}
+\item image/jpeg
+\item image/png
+\item image/gif
+\item image/targa
+\item image/svg+xml
+\item image/example
+\item audio/mp3
+\item message/http
+\item multipart/alternative
+\item multipart/encrypted
+\item text/cmd
+\item text/csv
+\end{itemize}
+However, when the line \texttt{var results = mime.detectMimeType("./r/mountain.jpeg");} 
+
+was amended to \texttt{var results = mime.detectMimeType("./r/rubbish");}
+
+the code also happily returned a true value. It seems that neither the the unit testing code for this use case, not the actual use case code, works correctly in that the mimetypes are not correctly detected.
 
 \subsubsection {Post-condition violations}
 
