@@ -76,6 +76,13 @@ The functional requirements postconditions for this use case included the need t
 \subsection {Resources A}
 \subsubsection {Pre-condition violations}
 
+\paragraph{uploadResources}
+\begin{itemize}
+\item The mime-type can be detected before the file is uploaded, thus not in violation of condition.
+\item The size can be determined before the file is uploaded, also not in violation of pre-condition.
+\item The database is queried (albeit erroneously due to logic faults) and checked if the mime-type is supported before the file gets uploaded.
+\end{itemize}
+
 \paragraph{getResourcesBySpaceId}
 The pre-condition will be that the SpaceID that is sent in as a parameter does exist in the database prior to this execution. There are no violations of this pre-condition.
 
@@ -98,7 +105,15 @@ The objectID passed as a parameter must conform to a hexadecimal sequence. If th
 
 \paragraph{updateResourceType}
 The pre-conditions which in this case is the constraintID passed as a parameter which is the ID of the constraint to be updated must exist in Resources contraints in the database and sizeLimit which is the new size limit of the constraint must be stated in bytes.
+
 \subsubsection {Post-condition violations}
+
+\paragraph{uploadResources}
+\begin{itemize}
+\item The wrong type of file and file size is added to the database due to improper testing of the mime-type and size.
+\item A URL to the resources are not explicitly created, the database needs to be queried each time a resource needs to be found.
+\item Persisting resource condition not violated, the resources persist.
+\end{itemize}
 
 \paragraph{getResourcesBySpaceId}
 The post-condition will be that the resources that exist in a certain space will be returned. This post-condition fails, because the function queries the database and returns all of the resources in the database, which is incorrect. No exceptions are thrown if the Buzz Space does not exist.
@@ -122,7 +137,11 @@ The objectID which is the ID of the constraint to be removed from Resources cont
 
 \paragraph{updateResourceType (updateConstraint)}
 The constraint with the specified constraintID in Resources contraints in the database will be updated by the new size limit.
+
 \subsubsection {Data structure requirements}
+
+\paragraph{uploadResources}
+No data structure requirements were given to this function apart from the fact that a timestamp had to be appended to the file name in order to prevent file name clashes. It excels in this area, providing a correct and meaningful timestamp and appending it to the back of the file name.
 
 \paragraph{getResourcesBySpaceId}
 No data structure requirements mentioned in the service contract, nor does getResourceBySpaceId utilise any data structures.
@@ -228,6 +247,10 @@ No data structure requirements mentioned in the service contract, nor does remov
 \subsection {Resources A}
 The use case was tested against the following list of architectural requirements:
 \subsubsection {Usability}
+
+\paragraph{uploadResources}
+Usage of this function is fairly easy and obvious. The selected files from the file selector only need to be sent through to the function and it handles all the rest of the heavy lifting. It can handle multiple files at once and tests each file individually.
+
 \paragraph{getResourcesBySpaceId}
 This function is easy and simple to use. The function is called with the Space ID, and a list of the resources for that space is returned.
 
@@ -238,6 +261,9 @@ This function is simple and easy to use. The function is called and all resource
 This function is simple and easy to use. The function is called and an appraisal type is sent as parameter. All resources of that appraisal type is returned.
 
 \subsubsection {Performance}
+
+\paragraph{uploadResources}
+The performance of this function would rely on network speed and stable connection to the database, since it does not require much computational time or pc resource allocation.
 
 \paragraph{getResourcesBySpaceId}
 This function does not suffer from performance issues. The performance of this function depends on the connection and communication speed of the database.
@@ -253,6 +279,9 @@ This function does not suffer from performance issues. The performance of this f
 
 \subsubsection {Scalability}
 
+\paragraph{uploadResources}
+This function allows multiple files to be uploaded together, with no specified limit of files. The size of each file is limited by the relevant mime-type entry in the database, thus, theoretically, any file size should be able to be uploaded, if the database permits it. Furthermore, multiple users can use the function concurrently, because of the way the server can be set up.
+
 \paragraph{getResourcesBySpaceId}
 This function does not place any restriction on the possible size of the database, as a list of all resources within a certain space is returned.
 
@@ -263,6 +292,9 @@ This function does not place any restriction on the possible size of the databas
 This function does not place any restriction on the possible size of the database, as a list of resources of a certain type is returned.
 
 \subsubsection {Testability}
+
+\paragraph{uploadResources}
+The testability of this function is not hard at all, since it allows only a certain number of things to happen. If a file is not allowed, it shouldn't be uploaded, if it is, it should. If the file size is too large, likewise. It is quite easy to send a query to the database to see if the correct information was stored by the function, thereby further enhancing the testability thereof.
 
 \paragraph{getResourcesBySpaceId}
 This function is easy to test, as it can be tested from the interfaces that was created.
@@ -278,6 +310,9 @@ No unit test created for testing of each functions implemented and provided test
 
 \subsubsection {Security}
 
+\paragraph{uploadResources}
+This function does not handle any type of security (except not allowing harmful mime-types). The connection to the database, for instance, is created somewhere else and the database object is only used by this function.
+
 \paragraph{getResourcesBySpaceId}
 This function is secure, as it only retrieves information from the database, about the resources for a certain space.
 
@@ -291,6 +326,9 @@ This function is secure, as it only retrieves information from the database, abo
 Interface is not secured in the client side adding Constraint section does not validate user input and adds the given input to the database without any validation ,the only validation is on the server side where it checks if the input is not already in the database.
 
 \subsubsection {Reliability}
+
+\paragraph{uploadResources}
+In the cases tested, the function is not reliable as it should be. It allows multiple files to be uploaded, as it should, however - it allows ALL files of any size to be uploaded due to a logic error in the code. The size is tested the wrong way around (a test is done to see if the max size is smaller than the file size, which is wrong). Not only that, a function is used to count the amount of records found, but the object containing all the records found cannot be "counted" in the way the coder wanted to. In order to make sure that the code was indeed faulty, new code was written to test the file to be uploaded and it was found that the original coder had indeed made a mistake.
 
 \paragraph{getResourcesBySpaceId}
 This function is very unreliable, because it does not conform to the post-condition. It returns a list of all of the resources, instead of only returning a list of resources within a certain space.
@@ -307,6 +345,9 @@ Lack of input validation results in garbage data entered in the database,which r
 
 \subsubsection {Reusability}
 
+\paragraph{uploadResources}
+This function can easily be reused, since it keeps no remnants of previous data that can possibly corrupt new data. Each use of the function is thus a clean slate, so to speak. It is also exported as part of the package.
+
 \paragraph{getResourcesBySpaceId}
 This function is reusable, as it retrieves information from the database, about the resources for a certain space. This function can be called and reused throughout the system.
 
@@ -317,6 +358,9 @@ This function is reusable, as it only retrieves information from the database, a
 This function is reusable, as it only retrieves information from the database, about all of the resources of a certain appraisal type. This function can be called and reused throughout the system.
 
 \subsubsection {Pluggability}
+
+\paragraph{uploadResources}
+This function is pluggable to the extent that mongoose is used as an interface to connect to the database. When that requirement is complied with, the function will be portable (it will accept file data and write it to the connected database). Electrolyte is also used to make the function more pluggable.
 
 \paragraph{getResourcesBySpaceId}
 This function is pluggable, as it retrieves information from the database, about the resources for a certain space. This function can be called and reused within any system if called on a database that has the same structure as the current database.
