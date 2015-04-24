@@ -212,8 +212,17 @@ the code still executes successfully. It appears that the unit testing for this 
 \paragraph{modifyResourceType}
 The required pre-conditions for this use case include the need for testing the validity of the mimetype that is sent through, as well as a parameter to limit the size limit the size of the mimetype change, presumably to avoid potential malpractice. The unit testing code as provided by the implementation team was not considered to be reliable in the testing of this use case, and since the modifyResourceType function appears to be a Boolean returning function, rather than actually modifying the specified item in the database, it can be concluded that this use case is violating its required pre-conditions.
 
+\paragraph{addResourceType}
+The pre-condition of addResourceType is assumed to be valid data. Tests for empty strings and resource types that do not belong to the MIME types were passed, without exceptions being thrown.
+
+\paragraph{removeResourceType}
+The pre-condition of removeResourceType is assumed to be valid data. Tests for empty strings and resource types that do not belong to the MIME types were passed, without exceptions being thrown. There were also no exceptions thrown for types that have not been added.
+
 \paragraph{removeResource}
 The pre-condition of removeResource is assumed to refer to the identification number of a resource in the database which should exist prior to this execution. There are no violations of this pre-condition due to error checks being performed to verify whether or not the entry exists.
+
+\paragraph{removeResourceTypeConstraint}
+The pre-condition of removeResourceTypeConstraint is assumed to be valid data. Tests for empty strings were passed without exceptions being thrown. There were also no exceptions thrown for type constraints that have not been added.
 
 \paragraph{detectMimeType} 
 There appears to be problems with the mimetype detection functionality. It is hard to see how this function, as it currently stands, will return a value other than true. Running the provided test code for the “Detect Mime Type” seems to confirm this. Each time the code was run, the code executes without fail when tested against various mimetypes. Representatives from the various mimtype groups were used, with emphasis on the ones that are expected to be most frequently used, including:
@@ -258,6 +267,12 @@ The mimetypes were not correctly identified.
 
 \paragraph{uploadResources}
 The \texttt{uploadResource} use case calls a filepath to an object to be uploaded, rather than an object or data structure itself. No data structures have been specified as required in the master specification document, and none were required.
+
+\paragraph{addResourceType}
+No data structure requirements mentioned in the service contract. However, \texttt{addResourceType} requires a string value as the only input. Said string must be a MIME type.
+
+\paragraph{removeResourceType}
+No data structure requirements mentioned in the service contract. However, \texttt{removeResourceType} requires a string value as the only input. Said string must be a MIME type.
 
 \paragraph{modifyResourceType}
 There are no data structure requirements for this use case.
@@ -411,12 +426,32 @@ Since the function does not work as required, any associated performance measure
 \paragraph{removeResource}
 removeResource demonstrates usability by being simple and easy to use. The function only needs be called along with the ID of the resource to be removed which is intuitive.
 
+\paragraph{addResourceType}
+addResourceType demonstrates usability by being simple and easy to use. The function only needs be called along with the string name of the resource to be added which is intuitive.
+
+\paragraph{removeResourceType}
+removeResourceType demonstrates usability by being simple and easy to use. The function only needs be called along with the string name of the resource to be removed which is intuitive.
+
+\paragraph{retrieveResourceTypeConstraint}
+retrieveResourceTypeConstraint demonstrates usability by being simple and easy to use. The function only needs be called along with the string name of the resource of which the constraint should be retrieved which is intuitive.
+
 \subsubsection {Performance}
 
 \paragraph{removeResource}
 removeResource does not suffer from any performance issues in and of itself, however should the database maintain a sizeable stature, removeResource will be seen to suffer in performance. This is to be expected.
 performance
 
+\paragraph{addResourceType}
+addResourceType does not suffer from any performance issues in and of itself, however should the database maintain a sizeable stature, addResourceType will be seen to suffer in performance. This is to be expected.
+performance
+
+\paragraph{removeResourceType}
+removeResourceType does not suffer from any performance issues in and of itself, however should the database maintain a sizeable stature, removeResourceType will be seen to suffer in performance. This is to be expected.
+performance
+
+\paragraph{retrieveResourceTypeConstraint}
+retrieveResourceTypeConstraint does not suffer from any performance issues in and of itself, however should the database maintain a sizeable stature, retrieveResourceTypeConstraint will be seen to suffer in performance. This is to be expected.
+performance
 
 \subsubsection {Scalability}
 
@@ -426,6 +461,15 @@ A size limit is imposed on the degree of modification that can be made to the up
 \paragraph{removeResource}
 removeResource offers no solutions to accomodate an increase or decrease in size of the database.
 
+\paragraph{addResourceType}
+addResourceType offers no solutions to addResourceType an increase or decrease in size of the database.
+
+\paragraph{removeResourceType}
+removeResourceType offers no solutions to removeResourceType an increase or decrease in size of the database.
+
+\paragraph{retrieveResourceTypeConstraint}
+retrieveResourceTypeConstraint offers no solutions to retrieveResourceTypeConstraint an increase or decrease in size of the database.
+
 \subsubsection {Testability}
 
 \paragraph{modifyResourceType}
@@ -433,6 +477,15 @@ The function has been modularised and this should , in principle, facilitate its
 
 \paragraph{removeResource}
 removeResource has a complete lack of testability due to it not conforming to proper unit testing standards (making use of callbacks, depending on a live database etc.).
+
+\paragraph{addResourceType}
+addResourceType seems to be testable.
+
+\paragraph{removeResourceType}
+removeResourceType seems to be testable.
+
+\paragraph{retrieveResourceTypeConstraint}
+retrieveResourceTypeConstraint seems to be testable.
 
 \subsubsection {Security}
 
@@ -442,6 +495,15 @@ This function may pose a security risk. It does not check the mimetype to see if
 \paragraph{removeResource}
 The only security concern would be an incorrect ID being used in order to remove a different resource than required, potentially putting the system at risk.
 
+\paragraph{addResourceType}
+addResourceType has no input validations and is therefore a great security risk.
+
+\paragraph{removeResourceType}
+removeResourceType has no input validations and is therefore a great security risk.
+
+\paragraph{retrieveResourceTypeConstraint}
+retrieveResourceTypeConstraint has no input validations and is therefore a great security risk.
+
 \subsubsection {Reliability}
 
 \paragraph{modifyResourceType}
@@ -449,6 +511,15 @@ The use case does not work as expected and cannot be described as reliable.
 
 \paragraph{removeResource}
 According to the failure of the post-condition, removeResource gives a poor indication with regards to reliability.
+
+\paragraph{addResourceType}
+According to the failure of the post-condition, addResourceType gives a poor indication with regards to reliability.
+
+\paragraph{removeResourceType}
+According to the failure of the post-condition, removeResourceType gives a poor indication with regards to reliability.
+
+\paragraph{retrieveResourceTypeConstraint}
+According to the failure of the post-condition, retrieveResourceTypeConstraint gives a poor indication with regards to reliability.
 
 \subsubsection {Reusability}
 
@@ -458,6 +529,15 @@ The use case does not work as expected and cannot be described as reusable.
 \paragraph{removeResource}
 removeResource is not very reusable due to the dependence on a single database. Using this function throughout this system would not be possible/practical.
 
+\paragraph{addResourceType}
+addResourceType is not very reusable due to the dependence on a single database. Using this function throughout this system would not be possible/practical.
+
+\paragraph{removeResourceType}
+removeResourceType is not very reusable due to the dependence on a single database. Using this function throughout this system would not be possible/practical.
+
+\paragraph{retrieveResourceTypeConstraint}
+retrieveResourceTypeConstraint is not very reusable due to the dependence on a single database. Using this function throughout this system would not be possible/practical.
+
 \subsubsection {Pluggability}
 
 \paragraph{modifyResourceType}
@@ -465,6 +545,15 @@ Due to the absence of callbacks in this code, as it currently stands, the code c
 
 \paragraph{removeResource}
 In the same vein as reusability, removeResource cannot be integrated into other systems due to a lack of robustness and versatility.
+
+\paragraph{addResourceType}
+In the same vein as reusability, addResourceType cannot be integrated into other systems due to a lack of robustness and versatility.
+
+\paragraph{removeResourceType}
+In the same vein as reusability, removeResourceType cannot be integrated into other systems due to a lack of robustness and versatility.
+
+\paragraph{retrieveResourceTypeConstraint}
+In the same vein as reusability, retrieveResourceTypeConstraint cannot be integrated into other systems due to a lack of robustness and versatility.
 
 
 \section {Critical Evaluation and Recommendations}
