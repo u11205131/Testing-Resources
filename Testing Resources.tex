@@ -209,6 +209,9 @@ and when this line is changed to read
 
 the code still executes successfully. It appears that the unit testing for this function is not working correctly, and as such, the use case cannot be tested with the code provided. 
 
+\paragraph{modifyResourceType}
+The required pre-conditions for this use case include the need for testing the validity of the mimetype that is sent through, as well as a parameter to limit the size limit the size of the mimetype change, presumably to avoid potential malpractice. The unit testing code as provided by the implementation team was not considered to be reliable in the testing of this use case, and since the modifyResourceType function appears to be a Boolean returning function, rather than actually modifying the specified item in the database, it can be concluded that this use case is violating its required pre-conditions.
+
 \paragraph{removeResource}
 The pre-condition of removeResource is assumed to refer to the identification number of a resource in the database which should exist prior to this execution. There are no violations of this pre-condition due to error checks being performed to verify whether or not the entry exists.
 
@@ -239,6 +242,9 @@ the code also happily returned a true value. It seems that neither the the unit 
 \paragraph{uploadResources}
 There is a folder with images and music files, but the code seems to make the presumption that there is a server in place that can handle the uploads. Since the \texttt{uploadResources} use case was not included in the unit testing, since the unit testing code has proved itself to be defective, and since many of the functionalities, such as mimetype detection, which \texttt{uploadResources} depends on, do not work themselves, it is concluded that the uploading of resources has not persisted to the database. No URLs seems to be created for the uploaded files. 
 
+\paragraph{modifyResourceType}
+It is not clear whether the items uploaded to the database are actually persisting. There is a folder with images and music files, but the code seems to make the presumption that there is a server in place that can handle the uploads.
+
 \paragraph{removeResource}
 The post-condition of removeResource would be the removal of an entry. Due to a lack of unit testing functionality, the post-condition fails as there is no visible indication of removeResource working.
 
@@ -252,6 +258,9 @@ The mimetypes were not correctly identified.
 
 \paragraph{uploadResources}
 The \texttt{uploadResource} use case calls a filepath to an object to be uploaded, rather than an object or data structure itself. No data structures have been specified as required in the master specification document, and none were required.
+
+\paragraph{modifyResourceType}
+There are no data structure requirements for this use case.
 
 \paragraph{removeResource}
 No data structure requirements mentioned in the service contract, nor does \texttt{removeResource} utilise any data structures.
@@ -396,6 +405,9 @@ This function is reusable, as it only retrieves information from the database, a
 The use case was tested against the following list of architectural requirements:
 \subsubsection {Usability}
 
+\paragraph{modifyResourceType}
+Since the function does not work as required, any associated performance measurement, in this case, is irrelevant. 
+
 \paragraph{removeResource}
 removeResource demonstrates usability by being simple and easy to use. The function only needs be called along with the ID of the resource to be removed which is intuitive.
 
@@ -408,30 +420,48 @@ performance
 
 \subsubsection {Scalability}
 
+\paragraph{modifyResourceType}
+A size limit is imposed on the degree of modification that can be made to the uploaded resource, as such there is a limitation on the scalability of modifications that can be made.
+
 \paragraph{removeResource}
 removeResource offers no solutions to accomodate an increase or decrease in size of the database.
 
 \subsubsection {Testability}
+
+\paragraph{modifyResourceType}
+The function has been modularised and this should , in principle, facilitate its testability.
 
 \paragraph{removeResource}
 removeResource has a complete lack of testability due to it not conforming to proper unit testing standards (making use of callbacks, depending on a live database etc.).
 
 \subsubsection {Security}
 
+\paragraph{modifyResourceType}
+This function may pose a security risk. It does not check the mimetype to see if it may be harmful. The function also doesn’t place constraints on the new size limit, which could lead to a significant portion of the database’s memory being allocated to the resources.
+
 \paragraph{removeResource}
 The only security concern would be an incorrect ID being used in order to remove a different resource than required, potentially putting the system at risk.
 
 \subsubsection {Reliability}
+
+\paragraph{modifyResourceType}
+The use case does not work as expected and cannot be described as reliable.
 
 \paragraph{removeResource}
 According to the failure of the post-condition, removeResource gives a poor indication with regards to reliability.
 
 \subsubsection {Reusability}
 
+\paragraph{modifyResourceType}
+The use case does not work as expected and cannot be described as reusable.
+
 \paragraph{removeResource}
 removeResource is not very reusable due to the dependence on a single database. Using this function throughout this system would not be possible/practical.
 
 \subsubsection {Pluggability}
+
+\paragraph{modifyResourceType}
+Due to the absence of callbacks in this code, as it currently stands, the code cannot be integrated into the existing implementation structure and is therefore, cannot be considered to be pluggable.
 
 \paragraph{removeResource}
 In the same vein as reusability, removeResource cannot be integrated into other systems due to a lack of robustness and versatility.
