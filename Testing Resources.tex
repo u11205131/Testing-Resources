@@ -263,6 +263,52 @@ The \texttt{downloadResource} use case calls a filepath to an object to be uploa
 
 The \texttt{detectMimeType} use case calls a filepath to an object to be uploaded, rather than an object or data structure itself. No data structures were required for this use case.
 
+
+\subsubsection {Pre-condition violations}
+
+\paragraph{addResourceType}The addResourceType use case was specified as part of the use case diagram (p 28 of the master specification document (SOLMS, 2015)), however its services requirements were not explicitly stated in the document. It is assumed, though, that the implementation of this use case attempts to fulfil the pre-conditions which are the resource type, or mimetype, and the file size, and should throw an exception in the case where
+\begin{itemize}
+\item The mimetype is syntactically incorrect
+\item The file size is not an string containing integer values
+\end{itemize}
+Using the test code provided by the implementation team, the addResourceType test code runs without fail when tested against the various valid mimeTypes and file sizes that include some of the following:
+\begin{itemize}
+\item image/jpeg  3000
+\item image/png   4000
+\item image/gif   5000
+\item image/targa 200
+\item text/csv    100
+\end{itemize}
+
+however when the line \texttt{ it('Should return true if successful!' and  results.should.equal(true);}\\
+was ammended to \texttt{ it('Should return false if successful!'  results.should.equal(false);}\\
+and was tested against various invalid mimetypes and Files sizes such as the following:
+\begin{itemize}
+\item jpeg/image  3000s
+\item png/image   4000s
+\item gid/image   5000s
+\item targa/image 200s
+\item csv/text    100s
+\end{itemize}
+The test code failed as seen in the figure bellow
+
+\begin{figure}[G]
+\includegraphics[width=\textwidth]{Images/AddResTest.jpg}
+\caption{Unit testing Resources B: the output provided by running the unit test code, as provided by the implementation team with invalid inputs \label{overflow}}
+\end{figure}
+
+\subsubsection {Post-condition violations}
+
+\paragraph{addResourceType}
+The mimetypes are added as a constraint, as required, but it is not clear to which field in the database, or file structure, the mimetypes and there sizes are added.
+
+\subsubsection {Data structure requirements}
+\paragraph{addResourceType}
+The function allows two strings as input parameters, and therefore there is no specific data structure requirement.
+
+
+
+
 \section {Non-functional testing / assessment}
 \subsection {Resources A}
 The use case was tested against the following list of architectural requirements:
@@ -399,43 +445,74 @@ The use case was tested against the following list of architectural requirements
 \paragraph{removeResource}
 removeResource demonstrates usability by being simple and easy to use. The function only needs be called along with the ID of the resource to be removed which is intuitive.
 
+\paragraph{addResourceType}
+There is no indication of the interface design for this use case, however the intension seems to be for the function to be fairly simple to use: only a mimetype and a maximum size is required.
+
+
 \subsubsection {Performance}
 
 \paragraph{removeResource}
 removeResource does not suffer from any performance issues in and of itself, however should the database maintain a sizeable stature, removeResource will be seen to suffer in performance. This is to be expected.
 performance
 
+\paragraph{addResourceType}
+Since the code could not be tested and correctly excuted, its performance could not be quantifiably ascertained.
 
 \subsubsection {Scalability}
 
 \paragraph{removeResource}
 removeResource offers no solutions to accomodate an increase or decrease in size of the database.
 
+\paragraph{addResourceType}
+There is potential for scalability in this use case since there is no fixed library of mimetypes or restriction on the mimetypes that can be uploaded.
+
 \subsubsection {Testability}
 
 \paragraph{removeResource}
 removeResource has a complete lack of testability due to it not conforming to proper unit testing standards (making use of callbacks, depending on a live database etc.).
+
+\paragraph{addResourceType}
+The function was designed to be modularised, so as such this should improve testability, 
+however, the unit test code always returns true, regardless of the mimetype input provided. 
+The conclusion is that the unit testing code cannot be relied upon to provide accurate testing 
+feedback in this case.
 
 \subsubsection {Security}
 
 \paragraph{removeResource}
 The only security concern would be an incorrect ID being used in order to remove a different resource than required, potentially putting the system at risk.
 
+\paragraph{addResourceType}
+ This use case does not check for valid mimetypes. 
+ It accepts any text which could open a path SQL injection if the values are stored in a database.  
+
 \subsubsection {Reliability}
 
 \paragraph{removeResource}
 According to the failure of the post-condition, removeResource gives a poor indication with regards to reliability.
+
+\paragraph{addResourceType}
+Since the unit test code for this use case does not work correctly, 
+the addResourceType functionality cannot be properly tested.
+The conclusion is that this use case may not be reliable. 
 
 \subsubsection {Reusability}
 
 \paragraph{removeResource}
 removeResource is not very reusable due to the dependence on a single database. Using this function throughout this system would not be possible/practical.
 
+\paragraph{addResourceType}
+Due to the absence of use of callbacks in the code, as it currently stands, the code cannot be 
+integrated into the existing implementation structure, and is therefore not reuability.
+
 \subsubsection {Pluggability}
 
 \paragraph{removeResource}
 In the same vein as reusability, removeResource cannot be integrated into other systems due to a lack of robustness and versatility.
 
+\paragraph{addResourceType}
+Due to the absence of use of callbacks in the code, as it currently stands, the code cannot be 
+integrated into the existing implementation structure, and is therefore not pluggable.
 
 \section {Critical Evaluation and Recommendations}
 \subsection {Resources A}
