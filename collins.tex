@@ -1,0 +1,125 @@
+\documentclass[a4paper]{article}
+
+\title{Project Implementation
+\\COS 301 Buzz Project
+\\Group: Testing Phase: Resources
+\\Version 1.0}
+
+\author{
+\\
+\\Carla de Beer 95151835
+\\Prenolan Govender 13102380
+\\Shaun Meintjies 13310896
+\\Collins Mphahlele 12211070
+\\Dumisani Msiza 12225887
+\\Joseph Murray 12030733
+\\Sifiso Shabangu 12081622
+\\Joseph Potgieter 12003672
+\\Johan van Rooyen 11205131
+\\
+\\
+\textit{https://github.com/Carla-de-Beer/Testing-Resources}
+\\
+\\ University of Pretoria}
+
+\date{24 April 2015}
+
+% Need to compile using XeLATeX to avoid default font
+\usepackage{fontspec}
+\setmainfont{Arial}
+% Graphics settings for .eps files
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\DeclareGraphicsExtensions{.eps}
+\usepackage{float}
+
+\begin{document}
+
+\maketitle
+% No page number to cover page
+\pagenumbering{gobble}
+\newpage
+% start page numbering
+\pagenumbering{arabic}
+
+% Generate Table of Contents
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+The purpose of this task was to test the functionality provided by the Resources teams for the Buzz Project.
+\\
+\\
+According to the master specification document, version 0.1, released 13 March 2015, the buzzResources module is used to upload and manage resources like media (e.g. images, video) and documents (e.g. PDF documents, Open Document Format documents). These resources are to be either embedded or linked to in posts.
+\\
+\\
+This team took each of the pre and post-conditions of the required use case, considering the work of both Resources A and Resources B, and tested them for compliance with the functional requirements. 
+\\
+\\The use case for this team is called \textbf{uploadResource}. In terms of the requirements for this use case, and as defined by the master specification document, users should be able to upload resources such as media files or documents. Any uploaded resource should be accessible by other users who should also be able to specify links to that resource. 
+\\
+\\The functional requirements preconditions for this use case included the need to
+\begin{itemize}
+\item detect the mime type
+\item check that size constraints are met
+\item check that the resource type is supported
+\end{itemize}
+The functional requirements postconditions for this use case included the need to
+\begin{itemize}
+\item check that the resource persisted
+\item check that the URL for the resource was created
+\end{itemize}
+
+\section {Functional Testing}
+\subsection {Resources A}
+In the following use cases the services contract requirements they where not specified.
+\\
+\subsubsection{removeResource Use Case}
+PRE-CONDITION
+The pre-conditions which in this case is resource ID being passed as a parameter to removeResource, the ID must exist in the databaase for a resource to be removed. 
+\\
+POST-CONDITION
+The post condition will be the removal of the specified resource by ID in the database.
+\\
+The removeResource does not conform to the post-condition as it cannnot remove the resource that exist in the database with the specified ID, but it does conform with the pre-condition that is specified above. 
+\subsubsection{addResourceType Use Case}
+PRE-CONDITION
+The pre-condition will be the MIME type passed would be a valid and existing MIME type and the size limit would be a valid size which would be stated in bytes.
+\\
+POST-CONDITION
+The post-condition is when the size limit and the MIME type would be added to the Resources contraints in the database.
+\\
+The pre-condition can be violated by passing the MIME type that does not exist and the function will just add the size limit and the MIME type to the Resources contraints in the database.
+\subsubsection{removeResourceType Use Case}
+PRE-CONDITION
+The objectID passed as a parameter must conform to a hexadecimal sequence. If the objectID specified is not hexadecimal, the function returns false.
+\\
+POST-CONDITION
+The objectID which is the ID of the constraint to be removed from Resources contraints in the database will be removed.
+\subsubsection{updateResourceType Use Case}
+PRE-CONDITION
+The pre-conditions which in this case is the constraintID passed as a parameter which is the ID of the constraint to be updated must exist in Resources contraints in the database and sizeLimit which is the new size limit of the constraint must be stated in bytes.
+\\
+POST-CONDITION
+The constraint with the specified constraintID in Resources contraints in the database will be updated by the new size limit.
+\subsection {Resources B}
+\subsubsection{removeResource Use Case}
+For this use case, no contract requirements were specified. It is assumed that a pre-condition for this use case would be that the database contains the ID being passed as a parameter to removeResource. The post-condition would be the removal of a resource entry from the database.
+\\
+removeResource successfully conforms to assumed pre-conditions and post-conditions. The pre-condition is tested before any manipulation of the database is performed. The post-condition (removal from the database) is properly reflected by the database.
+
+\subsubsection{addResourceType Use Case}
+For this use case the services contract requirements were not explicitly stated and by this it assumed that the pre-conditions for this use would be that the mime type passed would be a valid and existing MIME type and the size would be a valid value which would be stated in bytes the post-conditions would be that the MIME type would be added to the Resources contraints.
+\\
+In terms of functional requirements the module does not check if the mime type is a valid for instance someone might input css/text which is invalid rather than text/css. An exception is not thrown if the services contract is not fufilled.
+
+\section {Non-functional testing/assessment}
+\subsection {Resources A}
+\subsection {Resources B}
+\subsubsection{removeResource Use Case}
+No problems detected with regards to the bigger picture in terms of the system due to this use case being relatively simple.
+\subsubsection{addResourceType Use Case}
+This Module is fairly simple and its purpose is straightfoward therefore no problems where detected.
+
+\end{document}
